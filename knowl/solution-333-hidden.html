@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-31T19:52:10Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>If we factor the denominator, we can see how \(R\) might be the sum of two fractions of the form \(\frac{A}{x-2} + \frac{B}{x+1}\text{,}\) so we suppose that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{5x}{(x-2)(x+1)} = \frac{A}{x-2} + \frac{B}{x+1}
+\end{equation*}
+</div>
+<p class="continuation">and look for the constants \(A\) and \(B\text{.}\)</p>
+<p>Multiplying both sides of this equation by \((x-2)(x+1)\text{,}\) we find that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+5x = A(x+1) + B(x-2)\text{.}
+\end{equation*}
+</div>
+<p>Since we want this equation to hold for every value of \(x\text{,}\) we can use insightful choices of specific \(x\)-values to help us find \(A\) and \(B\text{.}\) Taking \(x = -1\text{,}\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+5(-1) = A(0) + B(-3)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so \(B = \frac{5}{3}\text{.}\) Choosing \(x = 2\text{,}\) it follows</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+5(2) = A(3) + B(0)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so \(A = \frac{10}{3}\text{.}\) Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int \frac{5x}{x^2-x-2} \, dx = \int \frac{10/3}{x-2} + \frac{5/3}{x+1} \, dx\text{.}
+\end{equation*}
+</div>
+<p>This integral is straightforward to evaluate, and hence we find that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int \frac{5x}{x^2-x-2} \, dx = \frac{10}{3} \ln|x-2| + \frac{5}{3}\ln|x+1| + C\text{.}
+\end{equation*}
+</div>
+</div></body>
+</html>

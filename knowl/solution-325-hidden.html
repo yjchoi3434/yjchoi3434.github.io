@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-31T19:51:51Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>We can choose to let \(u\) be either \(e^t\) or \(\cos(t)\text{;}\) we pick \(u = \cos(t)\text{,}\) and thus \(dv = e^t \, dt\text{.}\) With \(du = -\sin(t) \, dt\) and \(v = e^t\text{,}\) integration by parts tells us that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int e^t \cos(t) \, dt = e^t \cos(t) - \int e^t (-\sin(t))\, dt\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or equivalently that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int e^t \cos(t) \, dt = e^t \cos(t) + \int e^t \sin(t) \, dt\text{.}\tag{5.4.4}
+\end{equation}
+</div>
+<p>The new integral has the same algebraic structure as the original one. While the overall situation isn't necessarily better than what we started with, it hasn't gotten worse. Thus, we proceed to integrate by parts again. This time we let \(u = \sin(t)\) and \(dv = e^t \, dt\text{,}\) so that \(du = \cos(t) \, dt\) and \(v = e^t\text{,}\) which implies</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\int e^t \cos(t) \, dt = e^t \cos(t) + \left( e^t \sin(t) - \int e^t \cos(t) \, dt \right)\text{.}\tag{5.4.5}
+\end{equation}
+</div>
+<p>We seem to be back where we started, as two applications of integration by parts has led us back to the original problem, \(\int e^t \cos(t) \, dt\text{.}\) But if we look closely at <a class="xref" data-knowl="./knowl/E_IBPtwice2.html" title="Equation 5.4.5">Equation (5.4.5)</a>, we see that we can use algebra to solve for the value of the desired integral. Adding \(\int e^t \cos(t) \, dt\) to both sides of the equation, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2 \int e^t \cos(t) \, dt = e^t \cos(t) +  e^t \sin(t)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and therefore</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int e^t \cos(t) \, dt = \frac{1}{2} \left( e^t \cos(t) +  e^t \sin(t) \right) + C\text{.}
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Note that since we never actually encountered an integral we could evaluate directly, we didn't have the opportunity to add the integration constant \(C\) until the final step.</p>
+</div></body>
+</html>

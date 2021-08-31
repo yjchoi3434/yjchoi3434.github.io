@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-31T19:40:10Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Related Rates</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script async="" src="https://cse.google.com/cse.js?cx=015103900096539427448:ngwuia10qci"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="boelkins-ACS" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\dollar}{\$}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arctanh}{arctanh}
+              \DeclareMathOperator{\arcsec}{arcsec}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://activecalculus.org" target="_blank"><img src="images/ActiveCalculusImage_sm.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-3-4-applied-opt.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C-3.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="C-4.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-3-4-applied-opt.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C-3.html" title="Up">Up</a><a class="next-button button toolbar-item" href="C-4.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="yaN"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="C-1.html" data-scroll="UOk"><span class="codenumber">1</span> <span class="title">Understanding the Derivative</span></a><ul>
+<li><a href="sec-1-1-vel.html" data-scroll="Cph">How do we measure velocity?</a></li>
+<li><a href="sec-1-2-lim.html" data-scroll="VMz">The notion of limit</a></li>
+<li><a href="sec-1-3-derivative-pt.html" data-scroll="xyk">The derivative of a function at a point</a></li>
+<li><a href="sec-1-4-derivative-fxn.html" data-scroll="eZh">The derivative function</a></li>
+<li><a href="sec-1-5-units.html" data-scroll="IVE">Interpreting, estimating, and using the derivative</a></li>
+<li><a href="sec-1-6-second-d.html" data-scroll="QeE">The second derivative</a></li>
+<li><a href="sec-1-7-lim-cont-diff.html" data-scroll="UsY">Limits, Continuity, and Differentiability</a></li>
+<li><a href="sec-1-8-tan-line-approx.html" data-scroll="fgy">The Tangent Line Approximation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-2.html" data-scroll="AVt"><span class="codenumber">2</span> <span class="title">Computing Derivatives</span></a><ul>
+<li><a href="sec-2-1-elem-rules.html" data-scroll="SwH">Elementary derivative rules</a></li>
+<li><a href="sec-2-2-sin-cos.html" data-scroll="kOG">The sine and cosine functions</a></li>
+<li><a href="sec-2-3-prod-quot.html" data-scroll="gOH">The product and quotient rules</a></li>
+<li><a href="sec-2-4-other-trig.html" data-scroll="ybn">Derivatives of other trigonometric functions</a></li>
+<li><a href="sec-2-5-chain.html" data-scroll="omc">The chain rule</a></li>
+<li><a href="sec-2-6-inverse.html" data-scroll="iLl">Derivatives of Inverse Functions</a></li>
+<li><a href="sec-2-7-implicit.html" data-scroll="kOT">Derivatives of Functions Given Implicitly</a></li>
+<li><a href="sec-2-8-LHR.html" data-scroll="miH">Using Derivatives to Evaluate Limits</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-3.html" data-scroll="hcC"><span class="codenumber">3</span> <span class="title">Using Derivatives</span></a><ul>
+<li><a href="sec-3-1-tests.html" data-scroll="ubB">Using derivatives to identify extreme values</a></li>
+<li><a href="sec-3-2-families.html" data-scroll="sAJ">Using derivatives to describe families of functions</a></li>
+<li><a href="sec-3-3-optimization.html" data-scroll="bgZ">Global Optimization</a></li>
+<li><a href="sec-3-4-applied-opt.html" data-scroll="ZGh">Applied Optimization</a></li>
+<li><a href="sec-3-5-rel-rates.html" data-scroll="uiS" class="active">Related Rates</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-4.html" data-scroll="NjL"><span class="codenumber">4</span> <span class="title">The Definite Integral</span></a><ul>
+<li><a href="sec-4-1-velocity-distance.html" data-scroll="YPj">Determining distance traveled from velocity</a></li>
+<li><a href="sec-4-2-Riemann.html" data-scroll="DvA">Riemann Sums</a></li>
+<li><a href="sec-4-3-definite-integral.html" data-scroll="Oja">The Definite Integral</a></li>
+<li><a href="sec-4-4-FTC.html" data-scroll="LCP">The Fundamental Theorem of Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-5.html" data-scroll="tqU"><span class="codenumber">5</span> <span class="title">Evaluating Integrals</span></a><ul>
+<li><a href="sec-5-1-antid-graphs.html" data-scroll="mjh">Constructing Accurate Graphs of Antiderivatives</a></li>
+<li><a href="sec-5-2-FTC2.html" data-scroll="lNI">The Second Fundamental Theorem of Calculus</a></li>
+<li><a href="sec-5-3-substitution.html" data-scroll="wBi">Integration by Substitution</a></li>
+<li><a href="sec-5-4-parts.html" data-scroll="cWM">Integration by Parts</a></li>
+<li><a href="sec-5-5-other-opt.html" data-scroll="GxK">Other Options for Finding Algebraic Antiderivatives</a></li>
+<li><a href="sec-5-6-num-int.html" data-scroll="sec-5-6-num-int">Numerical Integration</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-6.html" data-scroll="Zyd"><span class="codenumber">6</span> <span class="title">Using Definite Integrals</span></a><ul><li><a href="sec-6-1-area.html" data-scroll="HaA">Using Definite Integrals to Find Area and Length</a></li></ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="gsI"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="integral-table.html" data-scroll="Alz"><span class="codenumber">A</span> <span class="title">A Short Table of Integrals</span></a></li>
+<li class="link"><a href="activities-answers.html" data-scroll="MzR"><span class="codenumber">B</span> <span class="title">Answers to Activities</span></a></li>
+<li class="link"><a href="exercises-answers.html" data-scroll="sHa"><span class="codenumber">C</span> <span class="title">Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="http://gvsu.edu/s/0vK" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="uiS"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Related Rates</span>
+</h2>
+<article class="objectives goal-like" id="ySL"><h6 class="heading"><span class="type">Motivating Questions</span></h6>
+<ul class="disc"><li id="cfo"><p id="RGj">If two quantities that are related, such as the radius and volume of a spherical balloon, are both changing as implicit functions of time, how are their rates of change related? That is, how does the relationship between the values of the quantities affect the relationship between their respective derivatives with respect to time?</p></li></ul></article><section class="introduction" id="eZU"><p id="IWr">In most of our applications of the derivative so far, we have been interested in the instantaneous rate at which one variable, say \(y\text{,}\) changes with respect to another, say \(x\text{,}\) leading us to compute and interpret \(\frac{dy}{dx}\text{.}\) We next consider situations where several variable quantities are related, but where each quantity is implicitly a function of time, which will be represented by the variable \(t\text{.}\) Through knowing how the quantities are related, we will be interested in determining how their respective rates of change with respect to time are related.</p>
+<p id="pdA">For example, suppose that air is being pumped into a spherical balloon so that its volume increases at a constant rate of 20 cubic inches per second. Since the balloon's volume and radius are related, by knowing how fast the volume is changing, we ought to be able to discover how fast the radius is changing. We are interested in questions such as: can we determine how fast the radius of the balloon is increasing at the moment the balloon's diameter is 12 inches?</p>
+<article class="exploration project-like" id="wJM"><h6 class="heading">
+<span class="type">Preview Activity</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
+</h6>
+<p id="QCD">A spherical balloon is being inflated at a constant rate of 20 cubic inches per second. How fast is the radius of the balloon changing at the instant the balloon's diameter is 12 inches? Is the radius changing more rapidly when \(d = 12\) or when \(d = 16\text{?}\) Why?</p>
+<ol class="lower-alpha">
+<li id="HiR"><p id="LSK">Draw several spheres with different radii, and observe that as volume changes, the radius, diameter, and surface area of the balloon also change.</p></li>
+<li id="nqa"><p id="rZT">Recall that the volume of a sphere of radius \(r\) is \(V = \frac{4}{3} \pi r^3\text{.}\) Note well that in the setting of this problem, <em class="emphasis">both</em> \(V\) and \(r\) are changing as time \(t\) changes, and thus both \(V\) and \(r\) may be viewed as implicit functions of \(t\text{,}\) with respective derivatives \(\frac{dV}{dt}\) and \(\frac{dr}{dt}\text{.}\) Differentiate both sides of the equation \(V = \frac{4}{3} \pi r^3\) with respect to \(t\) (using the chain rule on the right) to find a formula for \(\frac{dV}{dt}\) that depends on both \(r\) and \(\frac{dr}{dt}\text{.}\)</p></li>
+<li id="Txj"><p id="Yhc">At this point in the problem, by differentiating we have “related the rates” of change of \(V\) and \(r\text{.}\) Recall that we are given in the problem that the balloon is being inflated at a constant <em class="emphasis">rate</em> of 20 cubic inches per second. Is this rate the value of \(\frac{dr}{dt}\) or \(\frac{dV}{dt}\text{?}\) Why?</p></li>
+<li id="zEs"><p id="Eol">From part (c), we know the value of \(\frac{dV}{dt}\) at every value of \(t\text{.}\) Next, observe that when the diameter of the balloon is 12, we know the value of the radius. In the equation \(\frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}\text{,}\) substitute these values for the relevant quantities and solve for the remaining unknown quantity, which is \(\frac{dr}{dt}\text{.}\) How fast is the radius changing at the instant \(d = 12\text{?}\)</p></li>
+<li id="fLB"><p id="kvu">How is the situation different when \(d = 16\text{?}\) When is the radius changing more rapidly, when \(d = 12\) or when \(d = 16\text{?}\)</p></li>
+</ol></article></section><section class="subsection" id="aqb"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Related Rates Problems</span>
+</h3>
+<p id="VkJ">In problems where two or more quantities can be related to one another, and all of the variables involved are implicitly functions of time, \(t\text{,}\) we are often interested in how their rates are related; we call these <em class="emphasis">related rates</em> problems.  Once we have an equation establishing the relationship among the variables, we differentiate implicitly with respect to time to find connections among the rates of change.</p>
+<article class="example example-like" id="mEt"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
+</h6>
+<p id="QAQ">Sand is being dumped by a conveyor belt onto a pile so that the sand forms a right circular cone, as pictured in <a class="xref" data-knowl="./knowl/F-3-5-ConeEx.html" title="Figure 3.5.2">Figure 3.5.2</a>.  How are the instantaneous rates of change of the sand's volume, height, and radius related to one another?</p>
+<figure class="figure figure-like" id="wHZ"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/3_5_ConeEx.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.2<span class="period">.</span></span><span class="space"> </span>A conical pile of sand.</figcaption></figure><div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Lhd" id="Lhd"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lhd"><div class="solution solution-like">
+<p id="Hhe">As sand falls from the conveyor belt, several features of the sand pile will change: the volume of the pile will grow, the height will increase, and the radius will get bigger, too. All of these quantities are related to one another, and the rate at which each is changing is related to the rate at which sand falls from the conveyor.</p>
+<p id="non">We begin by identifying which variables are changing and how they are related. In this problem, we observe that the radius and height of the pile are related to its volume by the standard equation for the volume of a cone,</p>
+<div class="displaymath">
+\begin{equation*}
+V = \frac{1}{3} \pi r^2 h\text{.}
+\end{equation*}
+</div>
+<p id="Tvw">Viewing each of \(V\text{,}\) \(r\text{,}\) and \(h\) as functions of \(t\text{,}\) we differentiate implicitly to arrive at an equation that relates their respective rates of change. Taking the derivative of each side of the equation with respect to \(t\text{,}\) we find</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dt}[V] = \frac{d}{dt}\left[\frac{1}{3} \pi r^2 h\right]\text{.}
+\end{equation*}
+</div>
+<p id="zCF">On the left, \(\frac{d}{dt}[V]\) is simply \(\frac{dV}{dt}\text{.}\) On the right, the situation is more complicated, as both \(r\) and \(h\) are implicit functions of \(t\text{.}\) Hence we need the product and chain rules. We find that</p>
+<div class="displaymath">
+\begin{align*}
+\frac{dV}{dt} &amp;=  \frac{d}{dt}\left[\frac{1}{3} \pi r^2 h\right]\\
+&amp;=  \frac{1}{3} \pi r^2 \frac{d}{dt}[h] + \frac{1}{3} \pi h \frac{d}{dt}[r^2]\\
+&amp;=  \frac{1}{3} \pi r^2 \frac{dh}{dt} + \frac{1}{3} \pi h 2r \frac{dr}{dt}
+\end{align*}
+</div>
+<p id="fJO">(Note particularly how we are using ideas from <a href="sec-2-7-implicit.html" class="internal" title="Section 2.7: Derivatives of Functions Given Implicitly">Section 2.7</a> on implicit differentiation. There we found that when \(y\) is an implicit function of \(x\text{,}\) \(\frac{d}{dx}[y^2] = 2y \frac{dy}{dx}\text{.}\) The same principles are applied here when we compute \(\frac{d}{dt}[r^2] = 2r \frac{dr}{dt}\text{.}\))</p>
+<p id="LQX">The equation</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dV}{dt} = \frac{1}{3} \pi r^2 \frac{dh}{dt} + \frac{2}{3} \pi rh \frac{dr}{dt}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">relates the rates of change of \(V\text{,}\) \(h\text{,}\) and \(r\text{.}\)</p>
+</div></div>
+</div></article><p id="BrS">If we are given sufficient additional information, we may then find the value of one or more of these rates of change at a specific point in time.</p>
+<article class="example example-like" id="SLC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
+</h6>
+<p id="cPi">In the setting of <a class="xref" data-knowl="./knowl/Ex-3-5-FallingSand.html" title="Example 3.5.1">Example 3.5.1</a>, suppose we also know the following: (a) sand falls from the conveyor in such a way that the height of the pile is always half the radius, and (b) sand falls from the conveyor belt at a constant rate of 10 cubic feet per minute. How fast is the height of the sandpile changing at the moment the radius is 4 feet?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-rom" id="rom"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-rom"><div class="solution solution-like">
+<p id="rYg">The information that the height is always half the radius tells us that for all values of \(t\text{,}\) \(h = \frac{1}{2}r\text{.}\) Differentiating with respect to \(t\text{,}\) it follows that \(\frac{dh}{dt} = \frac{1}{2} \frac{dr}{dt}\text{.}\) These relationships enable us to relate \(\frac{dV}{dt}\) to just one of \(r\) or \(h\text{.}\) Substituting the expressions involving \(r\) and \(\frac{dr}{dt}\) for \(h\) and \(\frac{dh}{dt}\text{,}\) we now have that</p>
+<div class="displaymath">
+\begin{equation}
+\frac{dV}{dt} = \frac{1}{3} \pi r^2 \cdot \frac{1}{2} \frac{dr}{dt} + \frac{2}{3} \pi r \cdot \frac{1}{2}r \cdot \frac{dr}{dt}\text{.}\label{vCG}\tag{3.5.1}
+\end{equation}
+</div>
+<p id="Yfp">Since sand falls from the conveyor at the constant rate of 10 cubic feet per minute, the value of \(\frac{dV}{dt}\text{,}\) the rate at which the volume of the sand pile changes, is \(\frac{dV}{dt} = 10\) ft\(^3\)/min. We are interested in how fast the height of the pile is changing at the instant when \(r = 4\text{,}\) so we substitute \(r = 4\) and \(\frac{dV}{dt} = 10\) into Equation <a class="xref" data-knowl="./knowl/E-ConeRR.html" title="Equation 3.5.1">(3.5.1)</a>, to find</p>
+<div class="displaymath">
+\begin{equation*}
+10 = \frac{1}{3} \pi 4^2 \cdot \frac{1}{2}  \left. \frac{dr}{dt} \right|_{r=4} + \frac{2}{3} \pi 4 \cdot \frac{1}{2}4 \cdot \left. \frac{dr}{dt} \right|_{r=4} = \frac{8}{3}\pi \left. \frac{dr}{dt} \right|_{r=4} + \frac{16}{3} \pi \left. \frac{dr}{dt} \right|_{r=4}\text{.}
+\end{equation*}
+</div>
+<p id="Emy">Only the value of \(\left. \frac{dr}{dt} \right|_{r=4}\) remains unknown. We combine like terms on the right side of the equation above to get \(10 = 8 \pi \left. \frac{dr}{dt} \right|_{r=4}\text{,}\) and solve for \(\left. \frac{dr}{dt} \right|_{r=4}\) to find</p>
+<div class="displaymath">
+\begin{equation*}
+\left. \frac{dr}{dt} \right|_{r=4} = \frac{10}{8\pi} \approx 0.39789
+\end{equation*}
+</div>
+<p class="continuation">feet per second. Because we were interested in how fast the height of the pile was changing at this instant, we want to know \(\frac{dh}{dt}\) when \(r = 4\text{.}\) Since \(\frac{dh}{dt} = \frac{1}{2} \frac{dr}{dt}\) for all values of \(t\text{,}\) it follows</p>
+<div class="displaymath">
+\begin{equation*}
+\left. \frac{dh}{dt} \right|_{r=4} = \frac{5}{8\pi} \approx 0.19894 \ \text{ft/min}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><p id="hzb">Note the difference between the notations \(\frac{dr}{dt}\) and \(\left. \frac{dr}{dt} \right|_{r=4}\text{.}\) The former represents the rate of change of \(r\) with respect to \(t\) at an arbitrary value of \(t\text{,}\) while the latter is the rate of change of \(r\) with respect to \(t\) at a particular moment, the moment when \(r = 4\text{.}\)</p>
+<p id="NGk">Had we known that \(h = \frac{1}{2}r\) at the beginning of <a class="xref" data-knowl="./knowl/Ex-3-5-FallingSand.html" title="Example 3.5.1">Example 3.5.1</a>, we could have immediately simplified our work by writing \(V\) solely in terms of \(r\) to have</p>
+<div class="displaymath">
+\begin{equation*}
+V = \frac{1}{3} \pi r^2 \left(\frac{1}{2}h\right) = \frac{1}{6} \pi r^3\text{.}
+\end{equation*}
+</div>
+<p id="tNt">From this last equation, differentiating with respect to \(t\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dV}{dt} = \frac{1}{2} \pi r^2 \frac{dr}{dt}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">from which the same conclusions can be made.</p>
+<p id="ZUC">Our work with the sandpile problem above is similar in many ways to our approach in <a class="xref" data-knowl="./knowl/PA-3-5.html" title="Preview Activity 3.5.1">Preview Activity 3.5.1</a>, and these steps are typical of most related rates problems. In certain ways, they also resemble work we do in applied optimization problems, and here we summarize the main approach for consideration in subsequent problems.</p>
+<article class="note remark-like" id="Xvv"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
+</h6>
+<ul id="ktH" class="disc">
+<li id="Imx"><p id="xNs">Identify the quantities in the problem that are changing and choose clearly defined variable names for them. Draw one or more figures that clearly represent the situation.</p></li>
+<li id="otG"><p id="dUB">Determine all rates of change that are known or given and identify the rate(s) of change to be found.</p></li>
+<li id="UAP"><p id="KbK">Find an equation that relates the variables whose rates of change are known to those variables whose rates of change are to be found.</p></li>
+<li id="AHY"><p id="qiT">Differentiate implicitly with respect to \(t\) to relate the rates of change of the involved quantities.</p></li>
+<li id="gPh"><p id="Wqc">Evaluate the derivatives and variables at the information relevant to the instant at which a certain rate of change is sought. Use proper notation to identify when a derivative is being evaluated at a particular instant, such as \(\left. \frac{dr}{dt} \right|_{r=4}\text{.}\)</p></li>
+</ul></article><p id="GbL">When identifying variables and drawing a picture, it is important to think about the dynamic ways in which the quantities change. Sometimes a sequence of pictures can be helpful; for some pictures that can be easily modified as applets built in Geogebra, see the following links,<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 1 </sup></a> which represent</p>
+<ul class="disc">
+<li id="MWq"><p id="Cxl">how a circular oil slick's area grows as its radius increases <a class="external" href="http://gvsu.edu/s/9n" target="_blank">http://gvsu.edu/s/9n</a>;</p></li>
+<li id="tdz"><p id="iEu">how the location of the base of a ladder and its height along a wall change as the ladder slides <a class="external" href="http://gvsu.edu/s/9o" target="_blank">http://gvsu.edu/s/9o</a>;</p></li>
+<li id="ZkI"><p id="OLD">how the water level changes in a conical tank as it fills with water at a constant rate <a class="external" href="http://gvsu.edu/s/9p" target="_blank">http://gvsu.edu/s/9p</a> (compare the problem in <a class="xref" data-knowl="./knowl/act-3-5-1.html" title="Activity 3.5.2">Activity 3.5.2</a>);</p></li>
+<li id="FrR"><p id="uSM">how a skateboarder's shadow changes as he moves past a lamppost <a class="external" href="http://gvsu.edu/s/9q" target="_blank">http://gvsu.edu/s/9q</a>.</p></li>
+</ul>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">We again refer to the work of Prof. Marc Renault of Shippensburg University, found at <a class="external" href="http://gvsu.edu/s/5p" target="_blank">http://gvsu.edu/s/5p</a>.</div></div>
+<p id="miU">Drawing well-labeled diagrams and envisioning how different parts of the figure change is a key part of understanding related rates problems and being successful at solving them.</p>
+<article class="activity project-like" id="DEn"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
+</h6>
+<p id="mGc">A water tank has the shape of an inverted circular cone (point down) with a base of radius 6 feet and a depth of 8 feet. Suppose that water is being pumped into the tank at a constant instantaneous rate of 4 cubic feet per minute.</p>
+<ol class="lower-alpha">
+<li id="wvn"><p id="bxd">Draw a picture of the conical tank, including a sketch of the water level at a point in time when the tank is not yet full. Introduce variables that measure the radius of the water's surface and the water's depth in the tank, and label them on your figure.</p></li>
+<li id="cCw"><p id="HEm">Say that \(r\) is the radius and \(h\) the depth of the water at a given time, \(t\text{.}\) What equation relates the radius and height of the water, and why?</p></li>
+<li id="IJF"><p id="nLv">Determine an equation that relates the volume of water in the tank at time \(t\) to the depth \(h\) of the water at that time.</p></li>
+<li id="oQO"><p id="TSE">Through differentiation, find an equation that relates the instantaneous rate of change of water volume with respect to time to the instantaneous rate of change of water depth at time \(t\text{.}\)</p></li>
+<li id="UXX"><p id="zZN">Find the instantaneous rate at which the water level is rising when the water in the tank is 3 feet deep.</p></li>
+<li id="Bfg"><p id="ggW">When is the water rising most rapidly: at \(h = 3\text{,}\) \(h = 4\text{,}\) or \(h = 5\text{?}\)</p></li>
+</ol></article><p id="Sqd">Recognizing which geometric relationships are relevant in a given problem is often the key to finding the function to optimize. For instance, although the problem in <a class="xref" data-knowl="./knowl/act-3-5-1.html" title="Activity 3.5.2">Activity 3.5.2</a> is about a conical tank, the most important fact is that there are two similar right triangles involved. In another setting, we might use the Pythagorean Theorem to relate the legs of the triangle. But in the conical tank, the fact that the water fills the tank so that that the ratio of radius to depth is constant turns out to be the important relationship. In other situations where a changing angle is involved, trigonometric functions may provide the means to find relationships among various parts of the triangle.</p>
+<article class="activity project-like" id="MCA"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
+</h6>
+<p id="yyV">A television camera is positioned 4000 feet from the base of a rocket launching pad. The angle of elevation of the camera has to change at the correct rate in order to keep the rocket in sight. In addition, the auto-focus of the camera has to take into account the increasing distance between the camera and the rocket. We assume that the rocket rises vertically. (A similar problem is discussed and pictured dynamically at <a class="external" href="http://gvsu.edu/s/9t" target="_blank">http://gvsu.edu/s/9t</a>. Exploring the applet at the link will be helpful to you in answering the questions that follow.)</p>
+<ol class="lower-alpha">
+<li id="AJH"><p id="Txf">Draw a figure that summarizes the given situation. What parts of the picture are changing? What parts are constant? Introduce appropriate variables to represent the quantities that are changing.</p></li>
+<li id="gQQ"><p id="zEo">Find an equation that relates the camera's angle of elevation to the height of the rocket, and then find an equation that relates the instantaneous rate of change of the camera's elevation angle to the instantaneous rate of change of the rocket's height (where all rates of change are with respect to time).</p></li>
+<li id="MXZ"><p id="fLx">Find an equation that relates the distance from the camera to the rocket to the rocket's height, as well as an equation that relates the instantaneous rate of change of distance from the camera to the rocket to the instantaneous rate of change of the rocket's height (where all rates of change are with respect to time).</p></li>
+<li id="tfi"><p id="LSG">Suppose that the rocket's speed is 600 ft/sec at the instant it has risen 3000 feet. How fast is the distance from the television camera to the rocket changing at that moment? If the camera is following the rocket, how fast is the camera's angle of elevation changing at that same moment?</p></li>
+<li id="Zmr"><p id="rZP">If from an elevation of 3000 feet onward the rocket continues to rise at 600 feet/sec, will the rate of change of distance with respect to time be greater when the elevation is 4000 feet than it was at 3000 feet, or less? Why?</p></li>
+</ol></article><p id="yxm">In addition to finding instantaneous rates of change at particular points in time, we can often make more general observations about how particular rates themselves will change over time. For instance, when a conical tank is filling with water at a constant rate, it seems obvious that the depth of the water should increase more slowly over time. Note how carefully we must phrase the relationship: we mean to say that while the depth, \(h\text{,}\) of the water is increasing, its rate of change, \(\frac{dh}{dt}\text{,}\) is decreasing (both as a function of \(t\) and as a function of \(h\)). We make this observation by solving the equation that relates the various rates for one particular rate, without substituting any particular values for known variables or rates. For instance, in the conical tank problem in <a class="xref" data-knowl="./knowl/act-3-5-1.html" title="Activity 3.5.2">Activity 3.5.2</a>, we established that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dV}{dt} = \frac{1}{16} \pi h^2 \frac{dh}{dt}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and hence</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dh}{dt} = \frac{16}{\pi h^2} \frac{dV}{dt}\text{.}
+\end{equation*}
+</div>
+<p id="eEv">Provided that \(\frac{dV}{dt}\) is constant, it is immediately apparent that as \(h\) gets larger, \(\frac{dh}{dt}\) will get smaller but remain positive. Hence, the depth of the water is increasing at a decreasing rate.</p>
+<article class="activity project-like" id="dfm"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span>
+</h6>
+<p id="ECC">As pictured in the applet at <a class="external" href="http://gvsu.edu/s/9q" target="_blank">http://gvsu.edu/s/9q</a>, a skateboarder who is 6 feet tall rides under a 15 foot tall lamppost at a constant rate of 3 feet per second. We are interested in understanding how fast his shadow is changing at various points in time.</p>
+<ol class="lower-alpha">
+<li id="JHU"><p id="AYc">Draw an appropriate right triangle that represents a snapshot in time of the skateboarder, lamppost, and his shadow. Let \(x\) denote the horizontal distance from the base of the lamppost to the skateboarder and \(s\) represent the length of his shadow. Label these quantities, as well as the skateboarder's height and the lamppost's height on the diagram.</p></li>
+<li id="pPd"><p id="hfl">Observe that the skateboarder and the lamppost represent parallel line segments in the diagram, and thus similar triangles are present. Use similar triangles to establish an equation that relates \(x\) and \(s\text{.}\)</p></li>
+<li id="VWm"><p id="Nmu">Use your work in (b) to find an equation that relates \(\frac{dx}{dt}\) and \(\frac{ds}{dt}\text{.}\)</p></li>
+<li id="Cdv"><p id="ttD">At what rate is the length of the skateboarder's shadow increasing at the instant the skateboarder is 8 feet from the lamppost?</p></li>
+<li id="ikE"><p id="ZAM">As the skateboarder's distance from the lamppost increases, is his shadow's length increasing at an increasing rate, increasing at a decreasing rate, or increasing at a constant rate?</p></li>
+<li id="OrN"><p id="FHV">Which is moving more rapidly: the skateboarder or the tip of his shadow? Explain, and justify your answer.</p></li>
+</ol></article><p id="KLE">In the first three activities of this section, we provided guided instruction to build a solution in a step by step way. For the closing activity and the following exercises, most of the detailed work is left to the reader.</p>
+<article class="activity project-like" id="MQV"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
+</h6>
+<p id="riR">A baseball diamond is \(90'\) square. A batter hits a ball along the third base line and runs to first base. At what rate is the distance between the ball and first base changing when the ball is halfway to third base, if at that instant the ball is traveling \(100\) feet/sec? At what rate is the distance between the ball and the runner changing at the same instant, if at the same instant the runner is \(1/8\) of the way to first base running at \(30\) feet/sec?</p></article></section><section class="subsection" id="Gxk"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.2</span> <span class="title">Summary</span>
+</h3>
+<ul id="qSN" class="disc"><li id="lza">
+<p id="aZV">When two or more related quantities are changing as implicit functions of time, their rates of change can be related by implicitly differentiating the equation that relates the quantities themselves. For instance, if the sides of a right triangle are all changing as functions of time, say having lengths \(x\text{,}\) \(y\text{,}\) and \(z\text{,}\) then these quantities are related by the Pythagorean Theorem: \(x^2 + y^2 = z^2\text{.}\) It follows by implicitly differentiating with respect to \(t\) that their rates are related by the equation</p>
+<div class="displaymath">
+\begin{equation*}
+2x \frac{dx}{dt} + 2y\frac{dy}{dt} = 2z \frac{dz}{dt}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so that if we know the values of \(x\text{,}\) \(y\text{,}\) and \(z\) at a particular time, as well as two of the three rates, we can deduce the value of the third.</p>
+</li></ul></section><section class="exercises" id="Pzx"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.5.3</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="cjo"><h6 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Height of a conical pile of gravel.</span>
+</h6>
+<div id="webwork-94" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="94" data-sourceFilePath="Library/270/setDerivatives8RelatedRates/s2_8_21.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-4057">Gravel is being dumped from a conveyor belt at a rate of \(30\) cubic feet per minute. It forms a pile in the shape of a right circular cone whose base diameter and height are always the same.  How fast is the height of the pile increasing when the pile is \(16\) feet high?  Recall that the  volume of a right circular cone with height \(h\) and radius of the base \(r\) is given by \(V= \frac{1}{3}\pi r^2h\text{.}\)</p>
+<p id="p-4058">When the pile is \(16\) feet high, its height is increasing at <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> feet per minute.</p>
+<div><button class="webwork-button" onclick="initWW('webwork-94')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="Iqx"><h6 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Movement of a shadow.</span>
+</h6>
+<div id="webwork-95" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="95" data-sourceFilePath="Library/270/setDerivatives8RelatedRates/s2_8_7.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-4061">A street light is at the top of a 15 foot tall pole. A 6 foot tall woman walks away from the pole with a speed of 4 ft/sec along a straight path. How fast is the tip of her shadow moving when she is 35 feet from the base of the pole?</p>
+<p id="p-4062">The tip of the shadow is moving at <span class="fillin" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span> ft/sec.</p>
+<div><button class="webwork-button" onclick="initWW('webwork-95')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="oxG"><h6 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">A leaking conical tank.</span>
+</h6>
+<div id="webwork-96" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="96" data-sourceFilePath="Library/Rochester/setDerivatives8RelatedRates/c2s8p3.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-4064">Water is leaking out of an inverted conical tank at a rate of \(11700.0\) \(\textrm{cm}^3/\textrm{min}\) at the same time that water is being pumped  into the tank at a constant rate.  The tank has height \(13.0 \ \textrm{m}\) and the the diameter at the top is \(6.5 \ \textrm{m}\text{.}\)  If the water level is rising at a rate of \(25.0 \ \textrm{cm}/\textrm{min}\) when the height of the water is \(3.5 \ \textrm{m}\text{,}\) find the rate at which water is being pumped into the tank in cubic centimeters per minute.</p>
+<p id="p-4065">Answer: <span class="fillin" role="img" aria-label="30-character blank" style="width: 13.6363636363636em;"></span> \(\textrm{cm}^3/\textrm{min}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-64" id="hint-64"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-64"><div class="hint solution-like">\(R\) be the unknown rate at which water is being pumped in.  Then you know that if \(V\) is volume of water, \(\frac{dV}{dt}=R-11700.0\text{.}\)  Use geometry (similar triangles) to find the relationship between the height of the water and the volume of the water at any given time.  Recall that the volume of a cone with base radius \(r\) and height \(h\) is given by \(\frac{1}{3} \pi r^2 h\)</div></div>
+</div>
+<div><button class="webwork-button" onclick="initWW('webwork-96')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="UEP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="Eqy">A sailboat is sitting at rest near its dock. A rope attached to the bow of the boat is drawn in over a pulley that stands on a post on the end of the dock that is 5 feet higher than the bow. If the rope is being pulled in at a rate of 2 feet per second, how fast is the boat approaching the dock when the length of rope from bow to pulley is 13 feet?</p></article><article class="exercise exercise-like" id="ALY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="kxH">A swimming pool is \(60\) feet long and \(25\) feet wide. Its depth varies uniformly from \(3\) feet at the shallow end to \(15\) feet at the deep end, as shown in the <a class="xref" data-knowl="./knowl/F-3-5-Ez3.html" title="Figure 3.5.5">Figure 3.5.5</a>.</p>
+<figure class="figure figure-like" id="wLZ"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/3_5_Ez3.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5.5<span class="period">.</span></span><span class="space"> </span>The swimming pool.</figcaption></figure><p id="QEQ">Suppose the pool has been emptied and is now being filled with water at a rate of \(800\) cubic feet per minute. At what rate is the depth of water (measured at the deepest point of the pool) increasing when it is \(5\) feet deep at that end? Over time, describe how the depth of the water will increase: at an increasing rate, at a decreasing rate, or at a constant rate. Explain.</p></article><article class="exercise exercise-like" id="gTh"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="cTi">A baseball diamond is a square with sides \(90\) feet long. Suppose a baseball player is advancing from second to third base at the rate of \(24\) feet per second, and an umpire is standing on home plate. Let \(\theta\) be the angle between the third baseline and the line of sight from the umpire to the runner. How fast is \(\theta\) changing when the runner is \(30\) feet from third base?</p></article><article class="exercise exercise-like" id="Naq"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="Jar">Sand is being dumped off a conveyor belt onto a pile in such a way that the pile forms in the shape of a cone whose radius is always equal to its height. Assuming that the sand is being dumped at a rate of \(10\) cubic feet per minute, how fast is the height of the pile changing when there are \(1000\) cubic feet on the pile?</p></article></section></section></div></main>
+</div>
+</body>
+</html>

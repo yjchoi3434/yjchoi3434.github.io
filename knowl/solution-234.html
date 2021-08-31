@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-31T19:48:35Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.3.3.1</span><span class="period">.</span>
+</h6>
+<p>The volume \(V\) of a cone of diameter \(d\) and height \(h\) is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+V=\frac{\pi d^2 h }{12}.
+\end{equation*}
+</div>
+<p class="continuation">We might as well do this problem a little more generally than stated.  (It actually makes things clearer to use variables throughout and substitute specific values only at the end.) So suppose the diameter of our tank is \(D\) and its height is \(H\text{.}\)  Suppose the depth of the water is \(h\) and the radius of the surface is \(r\text{.}\) Then, by similar triangles,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{r}{h} = \frac{R}{H},
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+r= \frac{Rh}{H}.
+\end{equation*}
+</div>
+<p class="continuation">Substituting in the volume formula gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+V= \frac{\pi D^2h^3}{12H^2}.
+\end{equation*}
+</div>
+<p class="continuation">Differentiating gives:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+V'= \frac{3\pi D^2h^2h'}{12H^2} = \frac{\pi D^2h^2h'}{4H^2}
+\end{equation*}
+</div>
+<p class="continuation">This rate of change in volume would be the rate \(T\) at which water is being pumped into the tank if there was no leak.  However, if \(L\) is the leak rate then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+T = L+\frac{\pi D^2h^2h'}{4H^2}.
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Note that since we have to have consistent units of length, and the answer is in cubic centimeters per minute, the lengths given in meters have to be converted to centimeters.</p>
+<p>Thus, substituting</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L = 11700,\quad D = 650,\quad H = 1300,
+\quad h = 350,\quad h' = 25
+\end{equation*}
+</div>
+<p class="continuation">we obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+T = 11700 + \frac{\pi*650^2*350^2*25}{4*1300^2}
+\approx 613020 \hbox{cm}^3/\hbox{min}.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-3-5-rel-rates.html#solution-234">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-31T19:40:56Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Integration by Substitution</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://webwork-ptx.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/0.13/pretext-webwork.js"></script><script async="" src="https://cse.google.com/cse.js?cx=015103900096539427448:ngwuia10qci"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="boelkins-ACS" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\dollar}{\$}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arctanh}{arctanh}
+              \DeclareMathOperator{\arcsec}{arcsec}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://activecalculus.org" target="_blank"><img src="images/ActiveCalculusImage_sm.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-5-2-FTC2.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C-5.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-5-4-parts.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-5-2-FTC2.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C-5.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-5-4-parts.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="yaN"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="C-1.html" data-scroll="UOk"><span class="codenumber">1</span> <span class="title">Understanding the Derivative</span></a><ul>
+<li><a href="sec-1-1-vel.html" data-scroll="Cph">How do we measure velocity?</a></li>
+<li><a href="sec-1-2-lim.html" data-scroll="VMz">The notion of limit</a></li>
+<li><a href="sec-1-3-derivative-pt.html" data-scroll="xyk">The derivative of a function at a point</a></li>
+<li><a href="sec-1-4-derivative-fxn.html" data-scroll="eZh">The derivative function</a></li>
+<li><a href="sec-1-5-units.html" data-scroll="IVE">Interpreting, estimating, and using the derivative</a></li>
+<li><a href="sec-1-6-second-d.html" data-scroll="QeE">The second derivative</a></li>
+<li><a href="sec-1-7-lim-cont-diff.html" data-scroll="UsY">Limits, Continuity, and Differentiability</a></li>
+<li><a href="sec-1-8-tan-line-approx.html" data-scroll="fgy">The Tangent Line Approximation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-2.html" data-scroll="AVt"><span class="codenumber">2</span> <span class="title">Computing Derivatives</span></a><ul>
+<li><a href="sec-2-1-elem-rules.html" data-scroll="SwH">Elementary derivative rules</a></li>
+<li><a href="sec-2-2-sin-cos.html" data-scroll="kOG">The sine and cosine functions</a></li>
+<li><a href="sec-2-3-prod-quot.html" data-scroll="gOH">The product and quotient rules</a></li>
+<li><a href="sec-2-4-other-trig.html" data-scroll="ybn">Derivatives of other trigonometric functions</a></li>
+<li><a href="sec-2-5-chain.html" data-scroll="omc">The chain rule</a></li>
+<li><a href="sec-2-6-inverse.html" data-scroll="iLl">Derivatives of Inverse Functions</a></li>
+<li><a href="sec-2-7-implicit.html" data-scroll="kOT">Derivatives of Functions Given Implicitly</a></li>
+<li><a href="sec-2-8-LHR.html" data-scroll="miH">Using Derivatives to Evaluate Limits</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-3.html" data-scroll="hcC"><span class="codenumber">3</span> <span class="title">Using Derivatives</span></a><ul>
+<li><a href="sec-3-1-tests.html" data-scroll="ubB">Using derivatives to identify extreme values</a></li>
+<li><a href="sec-3-2-families.html" data-scroll="sAJ">Using derivatives to describe families of functions</a></li>
+<li><a href="sec-3-3-optimization.html" data-scroll="bgZ">Global Optimization</a></li>
+<li><a href="sec-3-4-applied-opt.html" data-scroll="ZGh">Applied Optimization</a></li>
+<li><a href="sec-3-5-rel-rates.html" data-scroll="uiS">Related Rates</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-4.html" data-scroll="NjL"><span class="codenumber">4</span> <span class="title">The Definite Integral</span></a><ul>
+<li><a href="sec-4-1-velocity-distance.html" data-scroll="YPj">Determining distance traveled from velocity</a></li>
+<li><a href="sec-4-2-Riemann.html" data-scroll="DvA">Riemann Sums</a></li>
+<li><a href="sec-4-3-definite-integral.html" data-scroll="Oja">The Definite Integral</a></li>
+<li><a href="sec-4-4-FTC.html" data-scroll="LCP">The Fundamental Theorem of Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-5.html" data-scroll="tqU"><span class="codenumber">5</span> <span class="title">Evaluating Integrals</span></a><ul>
+<li><a href="sec-5-1-antid-graphs.html" data-scroll="mjh">Constructing Accurate Graphs of Antiderivatives</a></li>
+<li><a href="sec-5-2-FTC2.html" data-scroll="lNI">The Second Fundamental Theorem of Calculus</a></li>
+<li><a href="sec-5-3-substitution.html" data-scroll="wBi" class="active">Integration by Substitution</a></li>
+<li><a href="sec-5-4-parts.html" data-scroll="cWM">Integration by Parts</a></li>
+<li><a href="sec-5-5-other-opt.html" data-scroll="GxK">Other Options for Finding Algebraic Antiderivatives</a></li>
+<li><a href="sec-5-6-num-int.html" data-scroll="sec-5-6-num-int">Numerical Integration</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-6.html" data-scroll="Zyd"><span class="codenumber">6</span> <span class="title">Using Definite Integrals</span></a><ul><li><a href="sec-6-1-area.html" data-scroll="HaA">Using Definite Integrals to Find Area and Length</a></li></ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="gsI"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="integral-table.html" data-scroll="Alz"><span class="codenumber">A</span> <span class="title">A Short Table of Integrals</span></a></li>
+<li class="link"><a href="activities-answers.html" data-scroll="MzR"><span class="codenumber">B</span> <span class="title">Answers to Activities</span></a></li>
+<li class="link"><a href="exercises-answers.html" data-scroll="sHa"><span class="codenumber">C</span> <span class="title">Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="http://gvsu.edu/s/0vK" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="wBi"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Integration by Substitution</span>
+</h2>
+<article class="objectives goal-like" id="ZNL"><h6 class="heading"><span class="type">Motivating Questions</span></h6>
+<ul class="disc">
+<li id="exE"><p id="vvP">How can we begin to find algebraic formulas for antiderivatives of more complicated algebraic functions?</p></li>
+<li id="KEN"><p id="bCY">What is an indefinite integral and how is its notation used in discussing antiderivatives?</p></li>
+<li id="qLW"><p id="HKh">How does the technique of \(u\)-substitution work to help us evaluate certain indefinite integrals, and how does this process rely on identifying function-derivative pairs?</p></li>
+</ul></article><section class="introduction" id="FUU"><p id="dsl">In <a href="sec-4-4-FTC.html" class="internal" title="Section 4.4: The Fundamental Theorem of Calculus">Section 4.4</a>, we learned the key role that antiderivatives play in the process of evaluating definite integrals exactly. The Fundamental Theorem of Calculus tells us that if \(F\) is any antiderivative of \(f\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\int_a^b f(x) \, dx = F(b) - F(a)\text{.}
+\end{equation*}
+</div>
+<p id="Jzu">Furthermore, we realized that each elementary derivative rule developed in <a href="C-2.html" class="internal" title="Chapter 2: Computing Derivatives">Chapter 2</a> leads to a corresponding elementary antiderivative, as summarized in <a class="xref" data-knowl="./knowl/T-4-4-Act2.html" title="Table 4.4.5">Table 4.4.5</a>. Thus, if we wish to evaluate an integral such as</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 \left(x^3 - \sqrt{x} + 5^x \right) \,dx\text{,}
+\end{equation*}
+</div>
+<p class="continuation">it is straightforward to do so, since we can easily antidifferentiate \(f(x) = x^3 - \sqrt{x} + 5^x\text{.}\) Because one antiderivative of \(f\) is \(F(x) = \frac{1}{4}x^4 - \frac{2}{3}x^{3/2} + \frac{1}{\ln(5)}5^x\text{,}\) the Fundamental Theorem of Calculus tells us that</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^1 \left(x^3 - \sqrt{x} + 5^x\right) \,dx &amp;=  \left. \frac{1}{4}x^4 - \frac{2}{3}x^{3/2} + \frac{1}{\ln(5)}5^x\right|_0^1\\
+&amp;= \left( \frac{1}{4}(1)^4 - \frac{2}{3}(1)^{3/2} + \frac{1}{\ln(5)}5^1 \right) - \left( 0 - 0 + \frac{1}{\ln(5)}5^0 \right)\\
+&amp;= -\frac{5}{12} + \frac{4}{\ln(5)}\text{.}
+\end{align*}
+</div>
+<p id="pGD">We see that we have a natural interest in being able to find such algebraic antiderivatives. We emphasize <em class="emphasis">algebraic</em> antiderivatives, as opposed to any antiderivative, since we know by the Second Fundamental Theorem of Calculus that \(G(x) = \int_a^x f(t) \, dt\) is indeed an antiderivative of the given function \(f\text{,}\) but one that still involves a definite integral. Our goal in this section is to “undo” the process of differentiation to find an algebraic antiderivative for a given function.</p>
+<article class="exploration project-like" id="fEx"><h6 class="heading">
+<span class="type">Preview Activity</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
+</h6>
+<p id="HbN">In <a href="sec-2-5-chain.html" class="internal" title="Section 2.5: The chain rule">Section 2.5</a>, we learned the Chain Rule and how it can be applied to find the derivative of a composite function. In particular, if \(u\) is a differentiable function of \(x\text{,}\) and \(f\) is a differentiable function of \(u(x)\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} \left[ f(u(x))  \right] = f'(u(x)) \cdot u'(x)\text{.}
+\end{equation*}
+</div>
+<p id="niW">In words, we say that the derivative of a composite function \(c(x) = f(u(x))\text{,}\) where \(f\) is considered the “outer” function and \(u\) the “inner” function, is “the derivative of the outer function, evaluated at the inner function, times the derivative of the inner function.”</p>
+<ol id="Tqf" class="lower-alpha">
+<li id="SGl">
+<p id="MQZ">For each of the following functions, use the Chain Rule to find the function's derivative. Be sure to label each derivative by name (e.g., the derivative of \(g(x)\) should be labeled \(g'(x)\)).</p>
+<ol id="sYi" class="lower-roman cols2">
+<li id="rSP"><p id="LLG">\(\displaystyle g(x) = e^{3x}\)</p></li>
+<li id="yNu"><p id="Zfr">\(\displaystyle h(x) = \sin(5x+1)\)</p></li>
+<li id="eUD"><p id="FmA">\(\displaystyle p(x) = \arctan(2x)\)</p></li>
+<li id="LbM"><p id="ltJ">\(\displaystyle q(x) = (2-7x)^4\)</p></li>
+<li id="riV"><p id="RAS">\(\displaystyle r(x) = 3^{4-11x}\)</p></li>
+</ol>
+</li>
+<li id="ACH">
+<p id="xIb">For each of the following functions, use your work in (a) to help you determine the general antiderivative<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-30" id="fn-30"><sup> 1 </sup></a> of the function. Label each antiderivative by name (e.g., the antiderivative of \(m\) should be called \(M\)). In addition, check your work by computing the derivative of each proposed antiderivative.</p>
+<ol class="lower-roman cols2">
+<li id="Xqe"><p id="uNv">\(\displaystyle m(x) = e^{3x}\)</p></li>
+<li id="Dxn"><p id="dPk">\(\displaystyle n(x) = \cos(5x+1)\)</p></li>
+<li id="PLF"><p id="JWt">\(\displaystyle s(x) = \frac{1}{1+4x^2}\)</p></li>
+<li id="vSO"><p id="qdC">\(\displaystyle v(x) = (2-7x)^3\)</p></li>
+<li id="bZX"><p id="WkL">\(\displaystyle w(x) = 3^{4-11x}\)</p></li>
+</ol>
+</li>
+<li id="gJQ">
+<p id="CrU">Based on your experience in parts (a) and (b), conjecture an antiderivative for each of the following functions. Test your conjectures by computing the derivative of each proposed antiderivative.</p>
+<ol class="lower-roman cols2">
+<li id="Ihg"><p id="aUE">\(\displaystyle a(x) = \cos(\pi x)\)</p></li>
+<li id="oop"><p id="izd">\(\displaystyle b(x) = (4x+7)^{11}\)</p></li>
+<li id="Uvy"><p id="OGm">\(\displaystyle c(x) = xe^{x^2}\)</p></li>
+</ol>
+</li>
+</ol>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-30"><div class="fn">Recall that the general antiderivative of a function includes “\(+C\)” to reflect the entire family of functions that share the same derivative.</div></div></article></section><section class="subsection" id="cIr"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.1</span> <span class="title">Reversing the Chain Rule: First Steps</span>
+</h3>
+<p id="VNM">Whenever \(f\) is a familiar function whose antiderivative is known and \(u(x)\) is a linear function, it is  straightforward to antidifferentiate a function of the form</p>
+<div class="displaymath">
+\begin{equation*}
+h(x) = f(u(x))\text{.}
+\end{equation*}
+</div>
+<article class="example example-like" id="Nzt"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
+</h6>
+<p id="EPB">Determine the general antiderivative of</p>
+<div class="displaymath">
+\begin{equation*}
+h(x) = (5x-3)^6\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Check the result by differentiating.</p>
+<p id="kWK">For this composite function, the outer function \(f\) is \(f(u) = u^6\text{,}\) while the inner function is \(u(x) = 5x - 3\text{.}\) Since the antiderivative of \(f\) is \(F(u) = \frac{1}{7}u^7+C\text{,}\) we see that the antiderivative of \(h\) is</p>
+<div class="displaymath">
+\begin{equation*}
+H(x) = \frac{1}{7} (5x-3)^7 \cdot \frac{1}{5} + C = \frac{1}{35} (5x-3)^7 + C\text{.}
+\end{equation*}
+</div>
+<p id="RdT">The inclusion of the constant \(\frac{1}{5}\) is essential precisely because the derivative of the inner function is \(u'(x) = 5\text{.}\) Indeed, if we now compute \(H'(x)\text{,}\) we find by the Chain Rule (and Constant Multiple Rule) that</p>
+<div class="displaymath">
+\begin{equation*}
+H'(x) = \frac{1}{35} \cdot 7(5x-3)^6 \cdot 5 = (5x-3)^6 = h(x)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and thus \(H\) is indeed the general antiderivative of \(h\text{.}\)</p></article><p id="BUV">Hence, in the special case where the outer function is familiar and the inner function is linear, we can antidifferentiate composite functions according to the following rule.</p>
+<article class="assemblage assemblage-like" id="Blb"><p id="ice">If \(h(x) = f(ax + b)\) and \(F\) is a known algebraic antiderivative of \(f\text{,}\) then the general antiderivative of \(h\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+H(x) = \frac{1}{a} F(ax+b) + C\text{.}
+\end{equation*}
+</div></article><p id="Ojn">It is useful to have shorthand notation that indicates the instruction to find an antiderivative. Thus, in a similar way to how the notation</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} \left[ f(x) \right]
+\end{equation*}
+</div>
+<p class="continuation">represents the derivative of \(f(x)\) with respect to \(x\text{,}\) we use the notation of the <em class="emphasis">indefinite integral</em>, </p>
+<div class="displaymath">
+\begin{equation*}
+\int f(x) \, dx
+\end{equation*}
+</div>
+<p class="continuation">to represent the general antiderivative of \(f\) with respect to \(x\text{.}\) Returning to the earlier example with \(h(x) = (5x-3)^6\text{,}\) we can rephrase the relationship between \(h\) and its antiderivative \(H\) through the notation</p>
+<div class="displaymath">
+\begin{equation*}
+\int (5x-3)^6 \, dx = \frac{1}{35} (5x-6)^7 + C\text{.}
+\end{equation*}
+</div>
+<p id="uqw">When we find an antiderivative, we will often say that we <em class="emphasis">evaluate an indefinite integral</em>.  Just as the notation \(\frac{d}{dx} [ \Box ]\) means “find the derivative with respect to \(x\) of \(\Box\text{,}\)” the notation \(\int \Box \, dx\) means “find a function of \(x\) whose derivative is \(\Box\text{.}\)”</p>
+<article class="activity project-like" id="YRF"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
+</h6>
+<p id="sKw">Evaluate each of the following indefinite integrals. Check each antiderivative that you find by differentiating.</p>
+<ol class="lower-alpha cols2">
+<li id="lBw"><p id="cRE">\(\displaystyle \int \sin(8-3x) \, dx\)</p></li>
+<li id="RIF"><p id="IYN">\(\displaystyle \int \sec^2 (4x) \, dx\)</p></li>
+<li id="xPO"><p id="pfW">\(\displaystyle \int \frac{1}{11x - 9} \, dx\)</p></li>
+<li id="dWX"><p id="Vnf">\(\displaystyle \int \csc(2x+1) \cot(2x+1) \, dx\)</p></li>
+<li id="Keg"><p id="Buo">\(\displaystyle \int \frac{1}{\sqrt{1-16x^2}}\, dx\)</p></li>
+<li id="qlp"><p id="hBx">\(\displaystyle \int 5^{-x}\, dx\)</p></li>
+</ol></article></section><section class="subsection" id="IPA"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.2</span> <span class="title">Reversing the Chain Rule: \(u\)-substitution</span>
+</h3>
+<p id="axF">A natural question arises from our recent work: what happens when the inner function is not linear? For example, can we find antiderivatives of such functions as</p>
+<div class="displaymath">
+\begin{equation*}
+g(x) = x e^{x^2} \ \text{and}  \ h(x) = e^{x^2}?
+\end{equation*}
+</div>
+<p id="GEO">It is important to remember that differentiation and antidifferentiation are almost inverse processes (that they are not is due to the \(+C\) that arises when antidifferentiating). This almost-inverse relationship enables us to take any known derivative rule and rewrite it as a corresponding rule for an indefinite integral. For example, since</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} \left[x^5\right] = 5x^4\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we can equivalently write</p>
+<div class="displaymath">
+\begin{equation*}
+\int 5x^4 \, dx = x^5 + C\text{.}
+\end{equation*}
+</div>
+<p id="mLX">Recall that the Chain Rule states that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} \left[ f(g(x)) \right] = f'(g(x)) \cdot g'(x)\text{.}
+\end{equation*}
+</div>
+<p id="STg">Restating this relationship in terms of an indefinite integral,</p>
+<div class="displaymath">
+\begin{equation}
+\int f'(g(x)) g'(x) \, dx = f(g(x))+C\text{.}\label{iLY}\tag{5.3.1}
+\end{equation}
+</div>
+<p id="zap"><a class="xref" data-knowl="./knowl/E-usubst.html" title="Equation 5.3.1">Equation (5.3.1)</a> tells us that if we can view a given function as \(f'(g(x)) g'(x)\) for some appropriate choices of \(f\) and \(g\text{,}\) then we can antidifferentiate the function by reversing the Chain Rule. Note that both \(g(x)\) and \(g'(x)\) appear in the form of \(f'(g(x)) g'(x)\text{;}\) we will sometimes say that we seek to <em class="emphasis">identify a function-derivative pair</em>  (\(g(x)\) and \(g'(x)\)) when trying to apply the rule in <a class="xref" data-knowl="./knowl/E-usubst.html" title="Equation 5.3.1">Equation (5.3.1)</a>.</p>
+<p id="fhy">If we can identify a function-derivative pair, we will introduce a new variable \(u\) to represent the function \(g(x)\text{.}\) With \(u = g(x)\text{,}\) it follows in Leibniz notation that \(\frac{du}{dx} = g'(x)\text{,}\) so that in terms of differentials<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-31" id="fn-31"><sup> 2 </sup></a>, \(du = g'(x)\, dx\text{.}\) Now converting the indefinite integral to a new one in terms of \(u\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\int f'(g(x)) g'(x) \, dx = \int f'(u) \,du\text{.}
+\end{equation*}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-31"><div class="fn">If we recall from the definition of the derivative that \(\frac{du}{dx} \approx \frac{\Delta{u}}{\Delta{x}}\) and use the fact that \(\frac{du}{dx} = g'(x)\text{,}\) then we see that \(g'(x) \approx \frac{\Delta{u}}{\Delta{x}}\text{.}\) Solving for \(\Delta u\text{,}\) \(\Delta u \approx g'(x) \Delta x\text{.}\) It is this last relationship that, when expressed in “differential” notation enables us to write \(du = g'(x) \, dx\) in the change of variable formula.</div></div>
+<p id="LoH">Provided that \(f'\) is an elementary function whose antiderivative is known, we can easily evaluate the indefinite integral in \(u\text{,}\) and then go on to determine the desired overall antiderivative of \(f'(g(x)) g'(x)\text{.}\) We call this process <em class="emphasis">\(u\)-substitution</em>, and summarize the rule as follows:</p>
+<article class="assemblage assemblage-like" id="hsk"><p id="rvQ">With the substitution \(u = g(x)\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\int f'(g(x)) g'(x) \, dx = \int f'(u) \,du = f(u) + C = f(g(x)) + C\text{.}
+\end{equation*}
+</div></article><p id="XCZ">To see \(u\)-substitution at work, we consider the following example.</p>
+<article class="example example-like" id="tGC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
+</h6>
+<p id="xlc">Evaluate the indefinite integral</p>
+<div class="displaymath">
+\begin{equation*}
+\int x^3 \cdot \sin (7x^4 + 3) \, dx
+\end{equation*}
+</div>
+<p class="continuation">and check the result by differentiating.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-mcd" id="mcd"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-mcd"><div class="solution solution-like">
+<p id="gmR">We can make two algebraic observations regarding the integrand, \(x^3 \cdot \sin (7x^4 + 3)\text{.}\) First, \(\sin (7x^4 + 3)\) is a composite function; as such, we know we'll need a more sophisticated approach to antidifferentiating. Second, \(x^3\) is almost the derivative of \((7x^4 + 3)\text{;}\) the only issue is a missing constant. Thus, \(x^3\) and \((7x^4 + 3)\) are nearly a function-derivative pair. Furthermore, we know the antiderivative of \(f(u) = \sin(u)\text{.}\) The combination of these observations suggests that we can evaluate the given indefinite integral by reversing the chain rule through \(u\)-substitution.</p>
+<p id="Mua">Letting \(u\) represent the inner function of the composite function \(\sin (7x^4 + 3)\text{,}\) we have \(u = 7x^4 + 3\text{,}\) and thus \(\frac{du}{dx} = 28x^3\text{.}\) In differential notation, it follows that \(du = 28x^3 \, dx\text{,}\) and thus \(x^3 \, dx = \frac{1}{28} \, du\text{.}\) The original indefinite integral may be slightly rewritten as</p>
+<div class="displaymath">
+\begin{equation*}
+\int \sin (7x^4 + 3) \cdot x^3 \, dx\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and so by substituting \(u\) for \(7x^4 + 3\) and \(\frac{1}{28} \, du\) for \(x^3 \, dx\text{,}\) it follows that</p>
+<div class="displaymath">
+\begin{equation*}
+\int \sin (7x^4 + 3) \cdot x^3 \, dx = \int \sin(u) \cdot \frac{1}{28} \, du\text{.}
+\end{equation*}
+</div>
+<p id="sBj">Now we may evaluate the easier integral in \(u\text{,}\) and then replace \(u\) by the expression \(7x^4 + 3\text{.}\) Doing so, we find</p>
+<div class="displaymath">
+\begin{align*}
+\int \sin (7x^4 + 3) \cdot x^3 \, dx &amp;= \int \sin(u) \cdot \frac{1}{28} \, du\\
+&amp;= \frac{1}{28} \int \sin(u) \, du\\
+&amp;= \frac{1}{28} (-\cos(u)) + C\\
+&amp;= -\frac{1}{28} \cos(7x^4 + 3) + C\text{.}
+\end{align*}
+</div>
+<p id="YIs">To check our work, we observe by the Chain Rule that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} \left[ -\frac{1}{28}\cos(7x^4 + 3) \right] = -\frac{1}{28} \cdot (-1)\sin(7x^4 + 3) \cdot 28x^3 = \sin(7x^4 + 3) \cdot x^3\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which is indeed the original integrand.</p>
+</div></div>
+</div></article><p id="DKi">The \(u\)-substitution worked because the function multiplying \(\sin (7x^4 + 3)\) was \(x^3\text{.}\) If instead that function was \(x^2\) or \(x^4\text{,}\) the substitution process would not have worked. This is one of the primary challenges of antidifferentiation: slight changes in the integrand make tremendous differences. For instance, we can use \(u\)-substitution with \(u = x^2\) and \(du = 2xdx\) to find that</p>
+<div class="displaymath">
+\begin{align*}
+\int xe^{x^2} \, dx &amp;=  \int e^u \cdot \frac{1}{2} \, du\\
+&amp;= \frac{1}{2} \int e^u \, du\\
+&amp;= \frac{1}{2} e^u + C\\
+&amp;= \frac{1}{2} e^{x^2} + C\text{.}
+\end{align*}
+</div>
+<p id="jRr">However, for the similar indefinite integral</p>
+<div class="displaymath">
+\begin{equation*}
+\int e^{x^2} \, dx\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the \(u\)-substitution \(u = x^2\) is no longer possible because the factor of \(x\) is missing. Hence, part of the lesson of \(u\)-substitution is just how specialized the process is: it only applies to situations where, up to a missing constant, the integrand is the result of applying the Chain Rule to a different, related function.</p>
+<article class="activity project-like" id="bqM"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span>
+</h6>
+<p id="vjD">Evaluate each of the following indefinite integrals by using these steps:</p>
+<ul class="disc">
+<li id="Cei"><p id="cwf">Find two functions within the integrand that form (up to a possible missing constant) a function-derivative pair;</p></li>
+<li id="ilr"><p id="IDo">Make a substitution and convert the integral to one involving \(u\) and \(du\text{;}\)</p></li>
+<li id="OsA"><p id="oKx">Evaluate the new integral in \(u\text{;}\)</p></li>
+<li id="uzJ"><p id="URG">Convert the resulting function of \(u\) back to a function of \(x\) by using your earlier substitution;</p></li>
+<li id="aGS"><p id="AYP">Check your work by differentiating the function of \(x\text{.}\) You should come up with the integrand originally given.</p></li>
+</ul>
+<ol class="lower-alpha cols2">
+<li id="GOb"><p id="hfY">\(\displaystyle \int \frac{x^2}{5x^3+1} \, dx\)</p></li>
+<li id="mVk"><p id="Nnh">\(\displaystyle \int e^x \sin(e^x) \, dx\)</p></li>
+<li id="Tct"><p id="tuq">\(\displaystyle \int \frac{\cos(\sqrt{x})}{\sqrt{x}} \, dx\)</p></li>
+</ol></article></section><section class="subsection" id="oWJ"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.3</span> <span class="title">Evaluating Definite Integrals via \(u\)-substitution</span>
+</h3>
+<p id="PYA">We have introduced \(u\)-substitution as a means to evaluate indefinite integrals of functions that can be written, up to a constant multiple, in the form \(f(g(x))g'(x)\text{.}\) This same technique can be used to evaluate definite integrals involving such functions, though we need to be careful with the corresponding limits of integration. Consider, for instance, the definite integral</p>
+<div class="displaymath">
+\begin{equation*}
+\int_2^5 xe^{x^2} \, dx\text{.}
+\end{equation*}
+</div>
+<p id="wfJ">Whenever we write a definite integral, it is implicit that the limits of integration correspond to the variable of integration. To be more explicit, observe that</p>
+<div class="displaymath">
+\begin{equation*}
+\int_2^5 xe^{x^2} \, dx = \int_{x=2}^{x=5} xe^{x^2} \, dx\text{.}
+\end{equation*}
+</div>
+<p id="cmS">When we execute a \(u\)-substitution, we change the <em class="emphasis">variable</em> of integration; it is essential to note that this also changes the <em class="emphasis">limits</em> of integration. For instance, with the substitution \(u = x^2\) and \(du = 2x \, dx\text{,}\) it also follows that when \(x = 2\text{,}\) \(u = 2^2 = 4\text{,}\) and when \(x = 5\text{,}\) \(u = 5^2 = 25\text{.}\) Thus, under the change of variables of \(u\)-substitution, we now have</p>
+<div class="displaymath">
+\begin{align*}
+\int_{x=2}^{x=5} xe^{x^2} \, dx    &amp;= \int_{u=4}^{u=25} e^{u} \cdot \frac{1}{2} \, du\\
+&amp;= \left. \frac{1}{2}e^u \right|_{u=4}^{u=25}\\
+&amp;= \frac{1}{2}e^{25} - \frac{1}{2}e^4\text{.}
+\end{align*}
+</div>
+<p id="Iub">Alternatively, we could consider the related indefinite integral \(\int xe^{x^2} \, dx\text{,}\) find the antiderivative \(\frac{1}{2}e^{x^2}\) through \(u\)-substitution, and then evaluate the original definite integral. With that method, we'd have</p>
+<div class="displaymath">
+\begin{align*}
+\int_{2}^{5} xe^{x^2} \, dx    &amp;= \left. \frac{1}{2}e^{x^2} \right|_{2}^{5}\\
+&amp;= \frac{1}{2}e^{25} - \frac{1}{2}e^4\text{,}
+\end{align*}
+</div>
+<p class="continuation">which is, of course, the same result.</p>
+<article class="activity project-like" id="ooY"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
+</h6>
+<p id="IhP">Evaluate each of the following definite integrals exactly through an appropriate \(u\)-substitution.</p>
+<ol class="lower-alpha cols2">
+<li id="Ywg"><p id="uek">\(\displaystyle \int_1^2 \frac{x}{1 + 4x^2} \, dx\)</p></li>
+<li id="EDp"><p id="alt">\(\displaystyle \int_0^1 e^{-x} (2e^{-x}+3)^{9} \, dx\)</p></li>
+<li id="kKy"><p id="GsC">\(\displaystyle \int_{2/\pi}^{4/\pi} \frac{\cos\left(\frac{1}{x}\right)}{x^{2}} \,dx\)</p></li>
+</ol></article></section><section class="subsection" id="VdS"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.3.4</span> <span class="title">Summary</span>
+</h3>
+<ul id="oBk" class="disc">
+<li id="Dao"><p id="nRq">To find algebraic formulas for antiderivatives of more complicated algebraic functions, we need to think carefully about how we can reverse known differentiation rules. To that end, it is essential that we understand and recall known derivatives of basic functions, as well as the standard derivative rules.</p></li>
+<li id="jhx">
+<p id="TYz">The indefinite integral provides notation for antiderivatives. When we write “\(\int f(x) \, dx\text{,}\)” we mean “the general antiderivative of \(f\text{.}\)”  In particular, if we have functions \(f\) and \(F\) such that \(F' = f\text{,}\) the following two statements say the exact thing:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx}[F(x)] = f(x) \ \text{and}  \ \int f(x) \, dx = F(x) + C\text{.}
+\end{equation*}
+</div>
+<p class="continuation">That is, \(f\) is the derivative of \(F\text{,}\) and \(F\) is an antiderivative of \(f\text{.}\)</p>
+</li>
+<li id="PoG">
+<p id="AfI">The technique of \(u\)-substitution helps us to evaluate indefinite integrals of the form \(\int f(g(x))g'(x) \, dx\) through the substitutions \(u = g(x)\) and \(du = g'(x) \, dx\text{,}\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+\int f(g(x))g'(x) \, dx = \int f(u) \, du\text{.}
+\end{equation*}
+</div>
+<p class="continuation">A key part of choosing the expression in \(x\) to be represented by \(u\) is the identification of a function-derivative pair. To do so, we often look for an “inner” function \(g(x)\) that is part of a composite function, while investigating whether \(g'(x)\) (or a constant multiple of \(g'(x)\)) is present as a multiplying factor of the integrand.</p>
+</li>
+</ul></section><section class="exercises" id="lDN"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.3.5</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="sFw"><h6 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Product involving 4th power of a polynomial.</span>
+</h6>
+<div id="webwork-125" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="125" data-sourceFilePath="Library/Michigan/Chap7Sec1/Q11.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-5537">Find the following integral.  Note that you can check your answer by differentiation.</p>
+<p id="p-5538">\(\displaystyle \int\, t^{4}\!\left(t^{5}-6\right)^{3} \,dt =\) <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div><button class="webwork-button" onclick="initWW('webwork-125')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="YMF"><h6 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Product involving \(\sin(x^6)\).</span>
+</h6>
+<div id="webwork-126" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="126" data-sourceFilePath="Library/Michigan/Chap7Sec1/Q49.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-5540">Find the the general antiderivative \(F(x)\) of the function \(f(x)\) given below.  Note that you can check your answer by differentiation.</p>
+<p id="p-5541">\(f(x) = 3 x^{5} \cos(x^{6})\)</p>
+<p id="p-5542">antiderivative \(F(x) =\) <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div><button class="webwork-button" onclick="initWW('webwork-126')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="ETO"><h6 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Fraction involving \(\ln^9\).</span>
+</h6>
+<div id="webwork-127" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="127" data-sourceFilePath="Library/Michigan/Chap7Sec1/Q27.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-5544">Find the following integral.  Note that you can check your answer by differentiation.</p>
+<p id="p-5545">\(\displaystyle  \int\,\frac{\ln^{2}\!\left(z\right)}{z}\,dz =\) <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div><button class="webwork-button" onclick="initWW('webwork-127')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="laX"><h6 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Fraction involving \(e^{5 x}\).</span>
+</h6>
+<div id="webwork-128" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="128" data-sourceFilePath="Library/Michigan/Chap7Sec1/Q33.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-5547">Find the following integral.  Note that you can check your answer by differentiation.</p>
+<p id="p-5548">\(\displaystyle \int\, \frac{e^{2x}}{6+e^{2x}} \,dx =\) <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div><button class="webwork-button" onclick="initWW('webwork-128')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="Rig"><h6 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Fraction involving \(e^{5 \sqrt{y}}\).</span>
+</h6>
+<div id="webwork-129" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="129" data-sourceFilePath="Library/Michigan/Chap7Sec1/Q31.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-5550">Find the following integral.  Note that you can check your answer by differentiation.</p>
+<p id="p-5551">\(\displaystyle \int\, \frac{3e^{3\sqrt{y}}}{\sqrt{y}} \,dy =\) <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div><button class="webwork-button" onclick="initWW('webwork-129')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="xpp"><h6 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Definite integral involving \(e^{-cos(q)}\).</span>
+</h6>
+<div id="webwork-130" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="130" data-sourceFilePath="Library/Michigan/Chap7Sec1/Q55.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<p id="p-5553">Use the Fundamental Theorem of Calculus to find</p>
+<p id="p-5554">\(\displaystyle  \int_{5\pi/2}^{3\pi}\, e^{\sin\!\left(q\right)}\cdot \cos\!\left(q\right) \,dq =\) <span class="fillin" role="img" aria-label="35-character blank" style="width: 15.9090909090909em;"></span></p>
+<div><button class="webwork-button" onclick="initWW('webwork-130')">Make Interactive</button></div>
+</div></article><article class="exercise exercise-like" id="dwy"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="pDM">This problem centers on finding antiderivatives for the basic trigonometric functions other than \(\sin(x)\) and \(\cos(x)\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="UMG"><p id="Ayq">Consider the indefinite integral \(\int \tan(x) \, dx\text{.}\) By rewriting the integrand as \(\tan(x) = \frac{\sin(x)}{\cos(x)}\) and identifying an appropriate function-derivative pair, make a \(u\)-substitution and hence evaluate \(\int \tan(x) \, dx\text{.}\)</p></li>
+<li id="ATP"><p id="gFz">In a similar way, evaluate \(\int \cot(x) \, dx\text{.}\)</p></li>
+<li id="haY">
+<p id="MMI">Consider the indefinite integral</p>
+<div class="displaymath">
+\begin{equation*}
+\int \frac{\sec^2(x) + \sec(x) \tan(x)}{\sec(x) + \tan(x)} \, dx\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Evaluate this integral using the substitution \(u = \sec(x) + \tan(x)\text{.}\)</p>
+</li>
+<li id="Nih"><p id="sTR">Simplify the integrand in (c) by factoring the numerator. What is a far simpler way to write the integrand?</p></li>
+<li id="tpq"><p id="Zba">Combine your work in (c) and (d) to determine \(\int \sec(x) \, dx\text{.}\)</p></li>
+<li id="Zwz"><p id="Fij">Using (c)-(e) as a guide, evaluate \(\int \csc(x) \, dx\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="JDH"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="VKV">Consider the indefinite integral \(\int x \sqrt{x-1} \, dx\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="blM"><p id="GXw">At first glance, this integrand may not seem suited to substitution due to the presence of \(x\) in separate locations in the integrand. Nonetheless, using the composite function \(\sqrt{x-1}\) as a guide, let \(u = x-1\text{.}\) Determine expressions for both \(x\) and \(dx\) in terms of \(u\text{.}\)</p></li>
+<li id="HsV"><p id="neF">Convert the given integral in \(x\) to a new integral in \(u\text{.}\)</p></li>
+<li id="nAe"><p id="TlO">Evaluate the integral in (b) by noting that \(\sqrt{u} = u^{1/2}\) and observing that it is now possible to rewrite the integrand in \(u\) by expanding through multiplication.</p></li>
+<li id="THn"><p id="zsX">Evaluate each of the integrals \(\int x^2 \sqrt{x-1} \, dx\) and \(\int x \sqrt{x^2 - 1} \, dx\text{.}\) Write a paragraph to discuss the similarities among the three indefinite integrals in this problem and the role of substitution and algebraic rearrangement in each.</p></li>
+</ol></article><article class="exercise exercise-like" id="pKQ"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="BSe">Consider the indefinite integral \(\int \sin^3(x) \, dx\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="QMH"><p id="Vbb">Explain why the substitution \(u = \sin(x)\) will not work to help evaluate the given integral.</p></li>
+<li id="wTQ"><p id="Bik">Recall the Fundamental Trigonometric Identity, which states that \(\sin^2(x) + \cos^2(x) = 1\text{.}\) By observing that \(\sin^3(x) = \sin(x) \cdot \sin^2(x)\text{,}\) use the Fundamental Trigonometric Identity to rewrite the integrand as the product of \(\sin(x)\) with another function.</p></li>
+<li id="daZ"><p id="hpt">Explain why the substitution \(u = \cos(x)\) now provides a possible way to evaluate the integral in (b).</p></li>
+<li id="Jii"><p id="NwC">Use your work in (a)-(c) to evaluate the indefinite integral \(\int \sin^3(x) \, dx\text{.}\)</p></li>
+<li id="ppr"><p id="tDL">Use a similar approach to evaluate \(\int \cos^3(x) \, dx\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="VRZ"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="hZn">For the town of Mathland, MI, residential power consumption has shown certain trends over recent years. Based on data reflecting average usage, engineers at the power company have modeled the town's rate of energy consumption by the function</p>
+<div class="displaymath">
+\begin{equation*}
+r(t) = 4 + \sin(0.263t + 4.7) + \cos(0.526t+9.4)\text{.}
+\end{equation*}
+</div>
+<p id="Ogw">Here, \(t\) measures time in hours after midnight on a typical weekday, and \(r\) is the rate of consumption in megawatts<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-32" id="fn-32"><sup> 3 </sup></a> at time \(t\text{.}\) Units are critical throughout this problem.</p>
+<ol class="lower-alpha">
+<li id="eQm"><p id="jeG">Sketch a carefully labeled graph of \(r(t)\) on the interval [0,24] and explain its meaning. Why is this a reasonable model of power consumption?</p></li>
+<li id="KXv"><p id="PlP">Without calculating its value, explain the meaning of \(\int_0^{24} r(t) \, dt\text{.}\) Include appropriate units on your answer.</p></li>
+<li id="reE"><p id="vsY">Determine the exact amount of energy Mathland consumes in a typical day.</p></li>
+<li id="XlN"><p id="bAh">What is Mathland's average rate of power consumption in a given 24-hour period? What are the units on this quantity?</p></li>
+</ol>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-32"><div class="fn">The unit <em class="emphasis">megawatt</em> is itself a rate, which measures energy consumption per unit time. A <em class="emphasis">megawatt-hour</em> is the total amount of energy that is equivalent to a constant stream of 1 megawatt of power being sustained for 1 hour.</div></div></article></section></section></div></main>
+</div>
+</body>
+</html>

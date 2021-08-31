@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-31T19:52:17Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{2x}{x^2-64}=\frac{A}{x+8}+\frac{B}{x-8}
+\end{equation*}
+</div>so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2x = A(x-8)+B(x+8) = (A+B)x + 8 (-A+B).
+\end{equation*}
+</div>Solving, we get \(A=B=1\text{,}\) so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int \frac{2x}{x^2-64}\,dx=
+\int \left(\frac{1}{x+8}+\frac{1}{x-8}\right)\,dx
+=\ln|x+8|+\ln|x-8|+C.
+\end{equation*}
+</div>Using the substitution \(w=x^2-64\text{,}\) we get \(dw= 2x\,dx\text{,}\) so we have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int \frac{2x}{x^2-64}\,dx=
+\int \frac{dw}{w}=\ln|w|+C = \ln|x^2-64|+C.
+\end{equation*}
+</div>The properties of logarithms show that the two results are the same:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\ln|x+8|+\ln|x-8| = \ln|(x+8)(x-8)| =\ln|x^2-64|.
+\end{equation*}
+</div>
+</div></body>
+</html>
