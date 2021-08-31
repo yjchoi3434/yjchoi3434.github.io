@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T23:01:47Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Power Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script async="" src="https://cse.google.com/cse.js?cx=015103900096539427448:ngwuia10qci"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="boelkins-ACS" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\dollar}{\$}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arctanh}{arctanh}
+              \DeclareMathOperator{\arcsec}{arcsec}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://activecalculus.org" target="_blank"><img src="images/ActiveCalculusImage_sm.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Matthew Boelkins</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-8-5-taylor.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C-8.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-8-5-taylor.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C-8.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="yaN"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="ehW">Contributors</a></li>
+<li><a href="preface-2.html" data-scroll="Kpf">Active Calculus: Our Goals</a></li>
+<li><a href="preface-3.html" data-scroll="qwo">Features of the Text</a></li>
+<li><a href="preface-for-students.html" data-scroll="lZk">Students!  Read this!</a></li>
+<li><a href="preface-for-instructors.html" data-scroll="Sgt">Instructors!  Read this!</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-1.html" data-scroll="UOk"><span class="codenumber">1</span> <span class="title">Understanding the Derivative</span></a><ul>
+<li><a href="sec-1-1-vel.html" data-scroll="Cph">How do we measure velocity?</a></li>
+<li><a href="sec-1-2-lim.html" data-scroll="VMz">The notion of limit</a></li>
+<li><a href="sec-1-3-derivative-pt.html" data-scroll="xyk">The derivative of a function at a point</a></li>
+<li><a href="sec-1-4-derivative-fxn.html" data-scroll="eZh">The derivative function</a></li>
+<li><a href="sec-1-5-units.html" data-scroll="IVE">Interpreting, estimating, and using the derivative</a></li>
+<li><a href="sec-1-6-second-d.html" data-scroll="QeE">The second derivative</a></li>
+<li><a href="sec-1-7-lim-cont-diff.html" data-scroll="UsY">Limits, Continuity, and Differentiability</a></li>
+<li><a href="sec-1-8-tan-line-approx.html" data-scroll="fgy">The Tangent Line Approximation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-2.html" data-scroll="AVt"><span class="codenumber">2</span> <span class="title">Computing Derivatives</span></a><ul>
+<li><a href="sec-2-1-elem-rules.html" data-scroll="SwH">Elementary derivative rules</a></li>
+<li><a href="sec-2-2-sin-cos.html" data-scroll="kOG">The sine and cosine functions</a></li>
+<li><a href="sec-2-3-prod-quot.html" data-scroll="gOH">The product and quotient rules</a></li>
+<li><a href="sec-2-4-other-trig.html" data-scroll="ybn">Derivatives of other trigonometric functions</a></li>
+<li><a href="sec-2-5-chain.html" data-scroll="omc">The chain rule</a></li>
+<li><a href="sec-2-6-inverse.html" data-scroll="iLl">Derivatives of Inverse Functions</a></li>
+<li><a href="sec-2-7-implicit.html" data-scroll="kOT">Derivatives of Functions Given Implicitly</a></li>
+<li><a href="sec-2-8-LHR.html" data-scroll="miH">Using Derivatives to Evaluate Limits</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-3.html" data-scroll="hcC"><span class="codenumber">3</span> <span class="title">Using Derivatives</span></a><ul>
+<li><a href="sec-3-1-tests.html" data-scroll="ubB">Using derivatives to identify extreme values</a></li>
+<li><a href="sec-3-2-families.html" data-scroll="sAJ">Using derivatives to describe families of functions</a></li>
+<li><a href="sec-3-3-optimization.html" data-scroll="bgZ">Global Optimization</a></li>
+<li><a href="sec-3-4-applied-opt.html" data-scroll="ZGh">Applied Optimization</a></li>
+<li><a href="sec-3-5-rel-rates.html" data-scroll="uiS">Related Rates</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-4.html" data-scroll="NjL"><span class="codenumber">4</span> <span class="title">The Definite Integral</span></a><ul>
+<li><a href="sec-4-1-velocity-distance.html" data-scroll="YPj">Determining distance traveled from velocity</a></li>
+<li><a href="sec-4-2-Riemann.html" data-scroll="DvA">Riemann Sums</a></li>
+<li><a href="sec-4-3-definite-integral.html" data-scroll="Oja">The Definite Integral</a></li>
+<li><a href="sec-4-4-FTC.html" data-scroll="LCP">The Fundamental Theorem of Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-5.html" data-scroll="tqU"><span class="codenumber">5</span> <span class="title">Evaluating Integrals</span></a><ul>
+<li><a href="sec-5-1-antid-graphs.html" data-scroll="mjh">Constructing Accurate Graphs of Antiderivatives</a></li>
+<li><a href="sec-5-2-FTC2.html" data-scroll="lNI">The Second Fundamental Theorem of Calculus</a></li>
+<li><a href="sec-5-3-substitution.html" data-scroll="wBi">Integration by Substitution</a></li>
+<li><a href="sec-5-4-parts.html" data-scroll="cWM">Integration by Parts</a></li>
+<li><a href="sec-5-5-other-opt.html" data-scroll="GxK">Other Options for Finding Algebraic Antiderivatives</a></li>
+<li><a href="sec-5-6-num-int.html" data-scroll="sec-5-6-num-int">Numerical Integration</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-6.html" data-scroll="Zyd"><span class="codenumber">6</span> <span class="title">Using Definite Integrals</span></a><ul>
+<li><a href="sec-6-1-area.html" data-scroll="HaA">Using Definite Integrals to Find Area and Length</a></li>
+<li><a href="sec-6-2-volume.html" data-scroll="KjB">Using Definite Integrals to Find Volume</a></li>
+<li><a href="sec-6-3-mass.html" data-scroll="ZGU">Density, Mass, and Center of Mass</a></li>
+<li><a href="sec-6-4-physics.html" data-scroll="Enl">Physics Applications:  Work, Force, and Pressure</a></li>
+<li><a href="sec-6-5-improper.html" data-scroll="EBG">Improper Integrals</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-7.html" data-scroll="FFm"><span class="codenumber">7</span> <span class="title">Differential Equations</span></a><ul>
+<li><a href="sec-7-1-diff-eq-intro.html" data-scroll="knq">An Introduction to Differential Equations</a></li>
+<li><a href="sec-7-2-qualitative.html" data-scroll="Wyg">Qualitative behavior of solutions to DEs</a></li>
+<li><a href="sec-7-3-euler.html" data-scroll="gBM">Euler's method</a></li>
+<li><a href="sec-7-4-separable.html" data-scroll="arb">Separable differential equations</a></li>
+<li><a href="sec-7-5-modeling.html" data-scroll="Ugq">Modeling with differential equations</a></li>
+<li><a href="sec-7-6-logistic.html" data-scroll="NVF">Population Growth and the Logistic Equation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-8.html" data-scroll="lMv"><span class="codenumber">8</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-8-1-sequences.html" data-scroll="kXx">Sequences</a></li>
+<li><a href="sec-8-2-geometric.html" data-scroll="Kkb">Geometric Series</a></li>
+<li><a href="sec-8-3-series.html" data-scroll="nbf">Series of Real Numbers</a></li>
+<li><a href="sec-8-4-alternating.html" data-scroll="GMS">Alternating Series</a></li>
+<li><a href="sec-8-5-taylor.html" data-scroll="cnS">Taylor Polynomials and Taylor Series</a></li>
+<li><a href="sec-8-6-powerseries.html" data-scroll="YgP" class="active">Power Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="gsI"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="integral-table.html" data-scroll="Alz"><span class="codenumber">A</span> <span class="title">A Short Table of Integrals</span></a></li>
+<li class="link"><a href="activities-answers.html" data-scroll="MzR"><span class="codenumber">B</span> <span class="title">Answers to Activities</span></a></li>
+<li class="link"><a href="exercises-answers.html" data-scroll="sHa"><span class="codenumber">C</span> <span class="title">Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="http://gvsu.edu/s/0vK" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="YgP"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.6</span> <span class="title">Power Series</span>
+</h2>
+<article class="objectives goal-like" id="hAB"><h6 class="heading"><span class="type">Motivating Questions</span></h6>
+<ul class="disc">
+<li id="yyM"><p id="jpO">What is a power series?</p></li>
+<li id="eFV"><p id="PwX">What are some important uses of power series?</p></li>
+<li id="KNe"><p id="vEg">What is the connection between power series and Taylor series?</p></li>
+</ul></article><section class="introduction" id="NHK"><p id="mUo">We have noted in our work with Taylor polynomials and Taylor series that polynomial functions are the simplest possible functions in mathematics, in part because they require only addition and multiplication to evaluate. From the point of view of calculus, polynomials are especially nice: we can easily differentiate or integrate any polynomial. In light of our work in <a href="sec-8-5-taylor.html" class="internal" title="Section 8.5: Taylor Polynomials and Taylor Series">Section 8.5</a>, we now know that several important non-polynomials have polynomial-like expansions. For example, for any real number \(x\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!} + \cdots\text{.}
+\end{equation*}
+</div>
+<p id="Tbx">There are two settings where other series like the one for \(e^x\) arise: we may be given an expression such as</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 2x + 3x^2 + 4x^3 + \cdots
+\end{equation*}
+</div>
+<p class="continuation">and we seek the values of \(x\) for which the expression makes sense. Or we may be trying to find an unknown function \(f\) that has expression</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_k x^k + \cdots\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and we try to determine the values of the constants \(a_0\text{,}\) \(a_1\text{,}\) \(\ldots\text{.}\) The latter situation is explored in <a class="xref" data-knowl="./knowl/PA-8-6.html" title="Preview Activity 8.6.1">Preview Activity 8.6.1</a>.</p>
+<article class="exploration project-like" id="Glc"><h6 class="heading">
+<span class="type">Preview Activity</span><span class="space"> </span><span class="codenumber">8.6.1</span><span class="period">.</span>
+</h6>
+<p id="QKh">In <a href="C-7.html" class="internal" title="Chapter 7: Differential Equations">Chapter 7</a>, we learned some of the many important applications of differential equations, and learned some approaches to solve or analyze them. Here, we consider an important approach that will allow us to solve a wider variety of differential equations.</p>
+<p id="wRq">Let's consider the familiar differential equation from exponential population growth given by</p>
+<div class="displaymath">
+\begin{equation}
+y' = ky\text{,}\label{pmR}\tag{8.6.1}
+\end{equation}
+</div>
+<p class="continuation">where \(k\) is the constant of proportionality. While we can solve this differential equation using methods we have already learned, we take a different approach now that can be applied to a much larger set of differential equations. For the rest of this activity, let's assume that \(k=1\text{.}\) We will use our knowledge of Taylor series to find a solution to the differential equation <a class="xref" data-knowl="./knowl/eq-PA-8-6-Resistance-ode.html" title="Equation 8.6.1">(8.6.1)</a>.</p>
+<p id="cYz">To do so, we assume that we have a solution \(y=f(x)\) and that \(f(x)\) has a Taylor series that can be written in the form</p>
+<div class="displaymath">
+\begin{equation*}
+y = f(x) = \sum_{k=0}^{\infty} a_kx^k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where the coefficients \(a_k\) are undetermined. Our task is to find the coefficients.</p>
+<ol id="JfI" class="lower-alpha">
+<li id="whw">
+<p id="Klb">Assume that we can differentiate a power series term by term. By taking the derivative of \(f(x)\) with respect to \(x\) and substituting the result into the differential equation <a class="xref" data-knowl="./knowl/eq-PA-8-6-Resistance-ode.html" title="Equation 8.6.1">(8.6.1)</a>, show that the equation</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=1}^{\infty} ka_kx^{k-1} = \sum_{k=0}^{\infty} a_kx^{k}
+\end{equation*}
+</div>
+<p class="continuation">must be satisfied in order for \(f(x) = \sum_{k=0}^{\infty} a_kx^k\) to be a solution of the DE.</p>
+</li>
+<li id="coF"><p id="qsk">Two series are equal if and only if they have the same coefficients on like power terms. Use this fact to find a relationship between \(a_1\) and \(a_0\text{.}\)</p></li>
+<li id="IvO"><p id="Wzt">Now write \(a_2\) in terms of \(a_1\text{.}\) Then write \(a_2\) in terms of \(a_0\text{.}\)</p></li>
+<li id="oCX"><p id="CGC">Write \(a_3\) in terms of \(a_2\text{.}\) Then write \(a_3\) in terms of \(a_0\text{.}\)</p></li>
+<li id="UKg"><p id="iNL">Write \(a_4\) in terms of \(a_3\text{.}\) Then write \(a_4\) in terms of \(a_0\text{.}\)</p></li>
+<li id="ARp"><p id="OUU">Observe that there is a pattern in (b)-(e). Find a general formula for \(a_k\) in terms of \(a_0\text{.}\)</p></li>
+<li id="gYy"><p id="vcd">Write the series expansion for \(y\) using only the unknown coefficient \(a_0\text{.}\) From this, determine what familiar functions satisfy the differential equation <a class="xref" data-knowl="./knowl/eq-PA-8-6-Resistance-ode.html" title="Equation 8.6.1">(8.6.1)</a>. (<em class="emphasis">Hint</em>: Compare to a familiar Taylor series.)</p></li>
+</ol></article></section><section class="subsection" id="EnY"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.6.1</span> <span class="title">Power Series</span>
+</h3>
+<p id="ziG">As <a class="xref" data-knowl="./knowl/PA-8-6.html" title="Preview Activity 8.6.1">Preview Activity 8.6.1</a> shows, it can be useful to treat an unknown function as if it has a Taylor series, and then determine the coefficients from other information. In other words, we define a function as an infinite series of powers of \(x\) and then determine the coefficients based on something besides a formula for the function. This method allows us to approximate solutions to many different types of differential equations, even if we cannot solve them explicitly. This is different from our work with Taylor series since we are not using an original function \(f\) to generate the coefficients of the series.</p>
+<article class="definition definition-like" id="IXR"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.6.1</span><span class="period">.</span>
+</h6>
+<p id="ikv">A <dfn class="terminology">power series</dfn> centered at \(x = a\) is a function of the form</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{k=0}^{\infty} c_k(x-a)^k\label{ttu}\tag{8.6.2}
+\end{equation}
+</div>
+<p class="continuation">where \(\{c_k\}\) is a sequence of real numbers and \(x\) is an independent variable.</p></article><p id="fpP">A power series defines a function \(f\) whose domain is the set of \(x\) values for which the power series converges. We therefore write</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \sum_{k=0}^{\infty} c_k(x-a)^k\text{.}
+\end{equation*}
+</div>
+<p id="LwY">It turns out that<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-56" id="fn-56"><sup> 1 </sup></a>, on its interval of convergence, every power series is in fact the Taylor series of the function it defines, so all of the techniques we developed in the previous section can be applied to power series as well.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-56"><div class="fn">See <a class="xref" data-knowl="./knowl/ex-8-5-2.html" title="Exercise 8.6.4.4">Exercise 8.6.4.4</a> in this section.</div></div>
+<article class="example example-like" id="pfa"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.6.2</span><span class="period">.</span>
+</h6>
+<p id="OrE">Consider the power series defined by</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \sum_{k=0}^{\infty} \frac{x^k}{2^k}\text{.}
+\end{equation*}
+</div>
+<p id="uyN">What are \(f(1)\) and \(f\left(\frac{3}{2}\right)\text{?}\) Find a general formula for \(f(x)\) and determine the values for which this power series converges.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-tOT" id="tOT"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-tOT"><div class="solution solution-like">
+<p id="UgQ">If we evaluate \(f\) at \(x=1\) we obtain the series</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{\infty} \frac{1}{2^k}
+\end{equation*}
+</div>
+<p class="continuation">which is a geometric series with ratio \(\frac{1}{2}\text{.}\) So we can sum this series and find that</p>
+<div class="displaymath">
+\begin{equation*}
+f(1) = \frac{1}{1-\frac{1}{2}} = 2\text{.}
+\end{equation*}
+</div>
+<p id="AnZ">Similarly,</p>
+<div class="displaymath">
+\begin{equation*}
+f(3/2) = \sum_{k=0}^{\infty} \left(\frac{3}{4}\right)^k = \frac{1}{1-\frac{3}{4}} = 4\text{.}
+\end{equation*}
+</div>
+<p id="gvi">In general, \(f(x)\) is a geometric series with ratio \(\frac{x}{2}\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \sum_{k=0}^{\infty} \left(\frac{x}{2}\right)^k = \frac{1}{1-\frac{x}{2}} = \frac{2}{2-x}
+\end{equation*}
+</div>
+<p class="continuation">provided that \(-1 \lt  \frac{x}{2} \lt  1\) (which ensures that the ratio is less than 1 in absolute value). Thus, the power series that defines \(f(x)=\frac{2}{2-x}\) converges for \(-2 \lt  x \lt  2\text{.}\)</p>
+</div></div>
+</div></article><p id="rEh">As we did for Taylor series, we define the interval of convergence of a power series <a class="xref" data-knowl="./knowl/eq-8-6-power-series.html" title="Equation 8.6.2">(8.6.2)</a> to be the set of values of \(x\) for which the series converges. And as we did with Taylor series, we typically use the Ratio Test to find the values of \(x\) for which the power series converges absolutely, and then check the endpoints separately if the radius of convergence is finite.</p>
+<article class="example example-like" id="Vmj"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.6.3</span><span class="period">.</span>
+</h6>
+<p id="aFW">Let \(f(x) = \sum_{k=1}^{\infty} \frac{x^k}{k^2}\text{.}\) Determine the interval of convergence of this power series.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-ZWc" id="ZWc"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZWc"><div class="solution solution-like">
+<p id="MCr">First we will plot some of the partial sums of this power series to get an idea of the interval of convergence. Let</p>
+<div class="displaymath">
+\begin{equation*}
+S_n(x) = \sum_{k=1}^{n} \frac{x^k}{k^2}
+\end{equation*}
+</div>
+<p class="continuation">for each \(n \geq 1\text{.}\) <a class="xref" data-knowl="./knowl/F-8-6-Power-Series.html" title="Figure 8.6.4">Figure 8.6.4</a> shows plots of \(S_{10}(x)\) (in red), \(S_{25}(x)\) (in blue), and \(S_{50}(x)\) (in green).</p>
+<figure class="figure figure-like" id="xtt"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/8_6_Power_Series.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.6.4<span class="period">.</span></span><span class="space"> </span>Graphs of some partial sums of the power series \(\sum_{k=1}^{\infty} \frac{x^k}{k^2}\text{.}\)</figcaption></figure><p id="sJA">The behavior of \(S_{50}\) in particular suggests that \(f(x)\) appears to be converging to a particular curve on the interval \((-1,1)\text{,}\) while growing without bound outside of that interval. Thus, the interval of convergence might be \(-1 \lt  x \lt  1\text{.}\) To verify our conjecture, we apply the Ratio Test. Now,</p>
+<div class="displaymath">
+\begin{equation*}
+a_k = \frac{x^k}{k^2}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{k \to \infty} \frac{\left| a_{k+1} \right|}{ \left| a_k \right|} \amp = \lim_{k \to \infty} \frac{ \frac{|x|^{k+1}}{(k+1)^2} }{ \frac{| x|^{k}}{k^2} }\\
+\amp = \lim_{k \to \infty} |x| \left(\frac{k}{k+1}\right)^2\\
+\amp = |x| \lim_{k \to \infty}  \left(\frac{k}{k+1}\right)^2\\
+\amp = |x|\text{.}
+\end{align*}
+</div>
+<p id="YQJ">Therefore, the Ratio Test tells us that \(f(x)\) converges absolutely when \(| x | \lt 1\) and diverges when \(| x | \gt 1\text{.}\) Because the Ratio Test is inconclusive when \(|x| = 1\text{,}\) we need to check \(x = 1\) and \(x = -1\) individually.</p>
+<p id="EXS">When \(x = 1\text{,}\) observe that</p>
+<div class="displaymath">
+\begin{equation*}
+f(1) = \sum_{k=1}^{\infty} \frac{1}{k^2}\text{.}
+\end{equation*}
+</div>
+<p id="lfb">This is a \(p\)-series with \(p \gt 1\text{,}\) which we know converges. When \(x = -1\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+f(-1) = \sum_{k=1}^{\infty} \frac{(-1)^k}{k^2}\text{.}
+\end{equation*}
+</div>
+<p id="Rmk">This is an alternating series, and since the sequence \(\left\{ \frac{1}{n^2} \right\}\) decreases to 0, the power series converges by the Alternating Series Test. Thus, the interval of convergence of this power series is \(-1 \le x \le 1\text{.}\)</p>
+</div></div>
+</div></article><article class="activity project-like" id="KnK"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.6.2</span><span class="period">.</span>
+</h6>
+<p id="tpz">Determine the interval of convergence of each power series.</p>
+<ol id="ZwI" class="lower-alpha cols2">
+<li id="qQs"><p id="lbg">\(\displaystyle \sum_{k=1}^{\infty} \frac{(x-1)^k}{3k}\)</p></li>
+<li id="WXB"><p id="Rip">\(\displaystyle \sum_{k=1}^{\infty} kx^k\)</p></li>
+<li id="DeK"><p id="xpy">\(\displaystyle \sum_{k=1}^{\infty} \frac{k^2(x+1)^k}{4^k}\)</p></li>
+<li id="jlT"><p id="dwH">\(\displaystyle \sum_{k=1}^{\infty} \frac{x^k}{(2k)!}\)</p></li>
+<li id="Ptc"><p id="JDQ">\(\displaystyle \sum_{k=1}^{\infty} k!x^k\)</p></li>
+</ol></article></section><section class="subsection" id="kvh"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.6.2</span> <span class="title">Manipulating Power Series</span>
+</h3>
+<p id="XLq">We know power series expansions for important functions such as \(\sin(x)\) and \(e^x\text{.}\) Often, we can use a known power series expansion to find a power series for a different, but related, function. The next activity demonstrates one way to do this.</p>
+<article class="activity project-like" id="XlW"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.6.3</span><span class="period">.</span>
+</h6>
+<p id="SCd">Our goal in this activity is to find a power series expansion for \(f(x) = \frac{1}{1+x^2}\) centered at \(x=0\text{.}\)</p>
+<p id="yJm">While we could use the methods of <a href="sec-8-5-taylor.html" class="internal" title="Section 8.5: Taylor Polynomials and Taylor Series">Section 8.5</a> and differentiate \(f(x) = \frac{1}{1+x^2}\) several times to look for patterns and find the Taylor series for \(f(x)\text{,}\) we seek an alternate approach because of how complicated the derivatives of \(f(x)\) quickly become.</p>
+<ol id="eQv" class="lower-alpha">
+<li id="Hte"><p id="QMQ">What is the Taylor series expansion for \(g(x) = \frac{1}{1-x}\text{?}\) What is the interval of convergence of this series?</p></li>
+<li id="nAn"><p id="wTZ">How is \(g(-x^2)\) related to \(f(x)\text{?}\) Explain, and hence substitute \(-x^2\) for \(x\) in the power series expansion for \(g(x)\text{.}\) Given the relationship between \(g(-x^2)\) and \(f(x)\text{,}\) how is the resulting series related to \(f(x)\text{?}\)</p></li>
+<li id="THw"><p id="dbi">For which values of \(x\) will this power series expansion for \(f(x)\) be valid? Why?</p></li>
+</ol></article><p id="DSz">In a previous section we found several important Maclaurin series and their intervals of convergence. Here, we list these key functions and their corresponding expansions.</p>
+<article class="assemblage assemblage-like" id="wJz"><div class="displaymath" id="jZI">
+\begin{align*}
+\sin(x) \amp =\sum_{k=0}^{\infty} \frac{(-1)^k x^{2k+1}}{(2k+1)!}\amp\text{for}\amp-\infty \lt  x \lt  \infty\\
+\cos(x) \amp =\sum_{k=0}^{\infty} \frac{(-1)^k x^{2k}}{(2k)!}\amp\text{for}\amp-\infty \lt  x \lt  \infty\\
+e^x \amp =\sum_{k=0}^{\infty} \frac{x^{k}}{k!}\amp\text{for}\amp-\infty \lt  x \lt  \infty\\
+\frac{1}{1-x} \amp =\sum_{k=0}^{\infty} x^k\amp\text{for}\amp-1 \lt  x \lt  1
+\end{align*}
+</div></article><p id="QgR">As we saw in <a class="xref" data-knowl="./knowl/act-8-6-2.html" title="Activity 8.6.3">Activity 8.6.3</a>, we can use these known series to find other power series expansions for related functions such as \(\sin(x^2)\text{,}\) \(e^{5x^3}\text{,}\) and \(\cos(x^5)\text{.}\)</p>
+<article class="activity project-like" id="wyA"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.6.4</span><span class="period">.</span>
+</h6>
+<p id="fAp">Let \(f\) be the function given by the power series expansion</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \sum_{k=0}^{\infty} (-1)^k \frac{x^{2k}}{(2k)!}\text{.}
+\end{equation*}
+</div>
+<ol id="LHy" class="lower-alpha">
+<li id="Urq">
+<p id="dLc">Assume that we can differentiate a power series term by term, just like we can differentiate a (finite) polynomial. Use the fact that</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots + (-1)^k \frac{x^{2k}}{(2k)!} + \cdots
+\end{equation*}
+</div>
+<p class="continuation">to find a power series expansion for \(f'(x)\text{.}\)</p>
+</li>
+<li id="Ayz"><p id="JSl">Observe that \(f(x)\) and \(f'(x)\) have familiar Taylor series. What familiar functions are these? What known relationship does our work demonstrate?</p></li>
+<li id="gFI"><p id="pZu">What is the series expansion for \(f''(x)\text{?}\) What familiar function is \(f''(x)\text{?}\)</p></li>
+</ol></article><p id="woa">Our work in <a class="xref" data-knowl="./knowl/act-8-6-2.html" title="Activity 8.6.3">Activity 8.6.3</a> holds more generally. The corresponding theorem, which we will not prove, states that we can differentiate a power series for a function \(f\) term by term and obtain the series expansion for \(f'\text{,}\) and similarly we can integrate a series expansion for a function \(f\) term by term and obtain the series expansion for \(\int f(x) \ dx\text{.}\) For both, the radius of convergence of the resulting series is the same as the original, though it is possible that the convergence status of the various series may differ at the endpoints. The formal statement of the Power Series Differentiation and Integration Theorem follows.</p>
+<article class="assemblage assemblage-like" id="cQI"><h6 class="heading"><span class="title">Power Series Differentiation and Integration Theorem.</span></h6>
+<p id="cvj">Suppose \(f(x)\) has a power series expansion</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \sum_{k=0}^{\infty} c_kx^k
+\end{equation*}
+</div>
+<p class="continuation">and that the series converges absolutely to \(f(x)\) on the interval \(-r \lt  x \lt  r\text{.}\) Then, the power series \(\sum_{k=1}^{\infty} kc_kx^{k-1}\) obtained by differentiating the power series for \(f(x)\) term by term converges absolutely to \(f'(x)\) on the interval \(-r \lt  x \lt  r\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = \sum_{k=1}^{\infty} kc_kx^{k-1}, \ \text{for}  \ |x| \lt  r\text{.}
+\end{equation*}
+</div></article><p id="ICs">Similarly, the power series \(\sum_{k=0}^{\infty} c_k\frac{x^{k+1}}{k+1}\) obtained by integrating the power series for \(f(x)\) term by term converges absolutely on the interval \(-r \lt  x \lt  r\text{,}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\int f(x) \ dx = \sum_{k=0}^{\infty} c_k\frac{x^{k+1}}{k+1} + C, \ \text{for}  \ |x| \lt  r\text{.}
+\end{equation*}
+</div>
+<p id="oJB">This theorem validates the steps we took in <a class="xref" data-knowl="./knowl/act-8-6-3.html" title="Activity 8.6.4">Activity 8.6.4</a>. It tells us that we can differentiate and integrate term by term on the interior of the interval of convergence, but it does not tell us what happens at the endpoints of this interval. We always need to check what happens at the endpoints separately. More importantly, we can use use the approach of differentiating or integrating a series term by term to find new series.</p>
+<article class="example example-like" id="Bts"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.6.5</span><span class="period">.</span>
+</h6>
+<p id="GNf">Find a series expansion centered at \(x = 0\) for \(\arctan(x)\text{,}\) as well as its interval of convergence.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Gdl" id="Gdl"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Gdl"><div class="solution solution-like">
+<p id="dAC">While we could differentiate \(\arctan(x)\) repeatedly and look for patterns in the derivative values at \(x = 0\) in an attempt to find the Maclaurin series for \(\arctan(x)\) from the definition, it turns out to be far easier to use a known series in an insightful way. In <a class="xref" data-knowl="./knowl/act-8-6-2.html" title="Activity 8.6.3">Activity 8.6.3</a>, we found that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1+x^2} = \sum_{k=0}^{\infty} (-1)^k x^{2k}
+\end{equation*}
+</div>
+<p class="continuation">for \(-1 \lt  x \lt  1\text{.}\) Recall that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dx} \left[ \arctan(x) \right] = \frac{1}{1+x^2}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and therefore</p>
+<div class="displaymath">
+\begin{equation*}
+\int \frac{1}{1+x^2} \ dx = \arctan(x) + C\text{.}
+\end{equation*}
+</div>
+<p id="JHL">It follows that we can integrate the series for \(\frac{1}{1+x^2}\) term by term to obtain the power series expansion for \(\arctan(x)\text{.}\) Doing so, we find that</p>
+<div class="displaymath">
+\begin{align*}
+\arctan(x) \amp = \int \left( \sum_{k=0}^{\infty} (-1)^kx^{2k} \right) \ dx\\
+\amp = \sum_{k=0}^{\infty} \left( \int (-1)^k x^{2k} \ dx \right)\\
+\amp = \left( \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{2k+1} \right) + C\text{.}
+\end{align*}
+</div>
+<p id="pOU">The Power Series Differentiation and Integration Theorem tells us that this equality is valid for at least \(-1 \lt x \lt 1\text{.}\)</p>
+<p id="VWd">To find the value of the constant \(C\text{,}\) we can use the fact that \(\arctan(0) = 0\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+0 = \arctan(0) = \left( \sum_{k=0}^{\infty} (-1)^k\frac{0^{2k+1}}{2k+1} \right) + C = C\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and we must have \(C = 0\text{.}\) Therefore,</p>
+<div class="displaymath">
+\begin{equation}
+\arctan(x) = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{2k+1}\label{Yvk}\tag{8.6.3}
+\end{equation}
+</div>
+<p class="continuation">for at least \(-1 \lt  x \lt  1\text{.}\)</p>
+<p id="Cdm">It is a straightforward exercise to check that the power series</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{2k+1}
+\end{equation*}
+</div>
+<p class="continuation">converges both when \(x = -1\) and when \(x = 1\text{;}\) in each case, we have an alternating series with terms \(\frac{1}{2k+1}\) that decrease to \(0\text{,}\) and thus the interval of convergence for the series expansion for \(\arctan(x)\) in Equation <a class="xref" data-knowl="./knowl/E-arctanseries.html" title="Equation 8.6.3">(8.6.3)</a> is \(-1 \le x \le 1\text{.}\)</p>
+</div></div>
+</div></article><article class="activity project-like" id="euW"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.6.5</span><span class="period">.</span>
+</h6>
+<p id="tDU">Find a power series expansion for \(\ln(1+x)\) centered at \(x=0\) and determine its interval of convergence.</p></article></section><section class="subsection" id="QCq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.6.3</span> <span class="title">Summary</span>
+</h3>
+<ul id="UQK" class="disc">
+<li id="qUn">
+<p id="bLp">A power series is a series of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^{\infty} a_kx^k\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="Xbw"><p id="HSy">We can often assume a solution to a given problem can be written as a power series, then use the information in the problem to determine the coefficients in the power series. This method allows us to approximate solutions to certain problems using partial sums of the power series; that is, we can find approximate solutions that are polynomials.</p></li>
+<li id="DiF"><p id="nZH">The connection between power series and Taylor series is that they are essentially the same thing: on its interval of convergence a power series is the Taylor series of its sum.</p></li>
+</ul></section><section class="exercises" id="BNa"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.6.4</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="WSo"><h6 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Finding coefficients in a power series expansion of a rational function.</span>
+</h6></article><article class="exercise exercise-like" id="CZx"><h6 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Finding coefficients in a power series expansion of a function involving \(\arctan(x)\).</span>
+</h6></article><article class="exercise exercise-like" id="jgG"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="LCl">We can use power series to approximate definite integrals to which known techniques of integration do not apply. We will illustrate this in this exercise with the definite integral \(\int_0^1 \sin(x^2) \,ds\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="awO"><p id="zJs">Use the Taylor series for \(\sin(x)\) to find the Taylor series for \(\sin(x^2)\text{.}\) What is the interval of convergence for the Taylor series for \(\sin(x^2)\text{?}\) Explain.</p></li>
+<li id="GDX"><p id="fQB">Integrate the Taylor series for \(\sin(x^2)\) term by term to obtain a power series expansion for \(\int \sin(x^2)\,dx\text{.}\)</p></li>
+<li id="mLg"><p id="LXK">Use the result from part (b) to explain how to evaluate \(\int_0^1 \sin(x^2) \ dx\text{.}\) Determine the number of terms you will need to approximate \(\int_0^1 \sin(x^2) \,dx\) to 3 decimal places.</p></li>
+</ol></article><article class="exercise exercise-like" id="PnP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="rJu">There is an important connection between power series and Taylor series. Suppose \(f\) is defined by a power series centered at 0 so that</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \sum_{k=0}^{\infty} a_kx^k\text{.}
+\end{equation*}
+</div>
+<ol id="XQD" class="lower-alpha">
+<li id="DJr"><p id="cVV">Determine the first 4 derivatives of \(f\) evaluated at 0 in terms of the coefficients \(a_k\text{.}\)</p></li>
+<li id="jQA"><p id="Jde">Show that \(f^{(n)}(0) = n!a_n\) for each positive integer \(n\text{.}\)</p></li>
+<li id="PXJ">
+<p id="pkn">Explain how the result of (b) tells us the following:</p>
+<blockquote class="blockquote" id="gma"><p id="Vrw">On its interval of convergence, a power series is the Taylor series of its sum.</p></blockquote>
+</li>
+</ol></article><article class="exercise exercise-like" id="vuY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="DXM">In this exercise we will begin with a strange power series and then find its sum. The Fibonacci sequence \(\{f_n\}\) is a famous sequence whose first few terms are</p>
+<div class="displaymath">
+\begin{equation*}
+f_0 = 0, f_1 = 1, f_2 = 1, f_3 = 2, f_4 = 3, f_5 = 5, f_6 = 8, f_7 = 13, \cdots\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where each term in the sequence after the first two is the sum of the preceding two terms. That is, \(f_0 = 0\text{,}\) \(f_1 = 1\) and for \(n \geq 2\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+f_n = f_{n-1} + f_{n-2}\text{.}
+\end{equation*}
+</div>
+<p id="keV">Now consider the power series</p>
+<div class="displaymath">
+\begin{equation*}
+F(x) = \sum_{k=0}^{\infty} f_kx^k\text{.}
+\end{equation*}
+</div>
+<p id="Qme">We will determine the sum of this power series in this exercise.</p>
+<ol id="wtn" class="lower-alpha">
+<li id="AOL">
+<p id="Giy">Explain why each of the following is true.</p>
+<ol id="mpH" class="lower-roman">
+<li id="uiB"><p id="hUj">\(\displaystyle xF(x) = \sum_{k=1}^{\infty} f_{k-1}x^k\)</p></li>
+<li id="gVU"><p id="SwQ">\(\displaystyle x^2F(x) = \sum_{k=2}^{\infty} f_{k-2}x^k\)</p></li>
+</ol>
+</li>
+<li id="bgI">
+<p id="yDZ">Show that</p>
+<div class="displaymath">
+\begin{equation*}
+F(x) - xF(x) - x^2F(x) = x\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="HnR">
+<p id="eLi">Now use the equation</p>
+<div class="displaymath">
+\begin{equation*}
+F(x) - xF(x) - x^2F(x) = x
+\end{equation*}
+</div>
+<p class="continuation">to find a simple form for \(F(x)\) that doesn't involve a sum.</p>
+</li>
+<li id="nva"><p id="KSr">Use a computer algebra system or some other method to calculate the first 8 derivatives of \(\frac{x}{1-x-x^2}\) evaluated at 0. Why shouldn't the results surprise you?</p></li>
+</ol></article><article class="exercise exercise-like" id="bCh"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="cAw">Airy's equation<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-57" id="fn-57"><sup> 2 </sup></a></p>
+<div class="displaymath">
+\begin{equation}
+y'' - xy = 0\text{,}\label{PgL}\tag{8.6.4}
+\end{equation}
+</div>
+<p class="continuation">can be used to model an undamped vibrating spring with spring constant \(x\) (note that \(y\) is an unknown function of \(x\)). So the solution to this differential equation will tell us the behavior of a spring-mass system as the spring ages (like an automobile shock absorber). Assume that a solution \(y=f(x)\) has a Taylor series that can be written in the form</p>
+<div class="displaymath">
+\begin{equation*}
+y = \sum_{k=0}^{\infty} a_kx^k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where the coefficients are undetermined. Our job is to find the coefficients.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-57"><div class="fn">The general differential equations of the form \(y'' \pm k^2xy = 0\) is called Airy's equation. These equations arise in many problems, such as the study of diffraction of light, diffraction of radio waves around an object, aerodynamics, and the buckling of a uniform column under its own weight.</div></div>
+<ol class="lower-alpha">
+<li id="Ndd"><p id="qZA">Differentiate the series for \(y\) term by term to find the series for \(y'\text{.}\) Then repeat to find the series for \(y''\text{.}\)</p></li>
+<li id="tkm">
+<p id="XgJ">Substitute your results from part (a) into the Airy equation and show that we can write Equation <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-equation.html" title="Equation 8.6.4">(8.6.4)</a> in the form</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{k=2}^{\infty} (k-1)ka_kx^{k-2} - \sum_{k=0}^{\infty} a_kx^{k+1} = 0\text{.}\label{vnU}\tag{8.6.5}
+\end{equation}
+</div>
+</li>
+<li id="Zrv">
+<p id="DnS">At this point, it would be convenient if we could combine the series on the left in <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-1.html" title="Equation 8.6.5">(8.6.5)</a>, but one written with terms of the form \(x^{k-2}\) and the other with terms in the form \(x^{k+1}\text{.}\) Explain why</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{k=2}^{\infty} (k-1)ka_kx^{k-2} = \sum_{k=0}^{\infty} (k+1)(k+2)a_{k+2}x^{k}\text{.}\label{bvd}\tag{8.6.6}
+\end{equation}
+</div>
+</li>
+<li id="FyE">
+<p id="jvb">Now show that</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{k=0}^{\infty} a_kx^{k+1} = \sum_{k=1}^{\infty} a_{k-1}x^k\text{.}\label{HCm}\tag{8.6.7}
+\end{equation}
+</div>
+</li>
+<li id="lFN">
+<p id="PCk">We can now substitute <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-sum-1.html" title="Equation 8.6.6">(8.6.6)</a> and <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-sum-2.html" title="Equation 8.6.7">(8.6.7)</a> into <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-1.html" title="Equation 8.6.5">(8.6.5)</a> to obtain</p>
+<div class="displaymath">
+\begin{equation}
+\sum_{n=0}^{\infty} (n+1)(n+2)a_{n+2}x^{n} - \sum_{n=1}^{\infty} a_{n-1}x^{n} = 0\text{.}\label{nJv}\tag{8.6.8}
+\end{equation}
+</div>
+<p id="vJt">Combine the like powers of \(x\) in the two series to show that our solution must satisfy</p>
+<div class="displaymath">
+\begin{equation}
+2a_2 + \sum_{k=1}^{\infty} \left[(k+1)(k+2)a_{k+2}-a_{k-1} \right] x^{k} = 0\text{.}\label{TQE}\tag{8.6.9}
+\end{equation}
+</div>
+</li>
+<li id="RMW">
+<p id="bQC">Use equation <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-sum-3.html" title="Equation 8.6.9">(8.6.9)</a> to show the following:</p>
+<ol id="HXL" class="lower-roman">
+<li id="apK"><p id="Obs">\(a_{3k+2} = 0\) for every positive integer \(k\text{,}\)</p></li>
+<li id="xUf"><p id="oeU">\(a_{3k} = \frac{1}{(2)(3)(5)(6) \cdots (3k-1)(3k)} a_0 \text{ for } k \geq 1\text{,}\)</p></li>
+<li id="ebo"><p id="Umd">\(a_{3k+1} = \frac{1}{(3)(4)(6)(7) \cdots (3k)(3k+1)} a_1 \text{ for } k \geq 1\text{.}\)</p></li>
+</ol>
+</li>
+<li id="TCj">
+<p id="Atm">Use the previous part to conclude that the general solution to the Airy equation <a class="xref" data-knowl="./knowl/eq-PA-8-6-Airy-equation.html" title="Equation 8.6.4">(8.6.4)</a> is</p>
+<div class="displaymath">
+\begin{align*}
+y \amp= a_0\left( 1+\sum_{k=1}^{\infty} \frac{x^{3k}}{(2)(3)(5)(6) \cdots (3k-1)(3k)} \right)\\
+\amp\phantom{={}}+ a_1 \left( x + \sum_{k=1}^{\infty} \frac{x^{3k+1}}{(3)(4)(6)(7) \cdots (3k)(3k+1)} \right)\text{.}
+\end{align*}
+</div>
+<p id="gAv">Any values for \(a_0\) and \(a_1\) then determine a specific solution that we can approximate as closely as we like using this series solution.</p>
+</li>
+</ol></article></section></section></div></main>
+</div>
+</body>
+</html>

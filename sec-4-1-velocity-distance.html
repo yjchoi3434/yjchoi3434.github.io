@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T22:58:55Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Determining distance traveled from velocity</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script async="" src="https://cse.google.com/cse.js?cx=015103900096539427448:ngwuia10qci"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="boelkins-ACS" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\dollar}{\$}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arctanh}{arctanh}
+              \DeclareMathOperator{\arcsec}{arcsec}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://activecalculus.org" target="_blank"><img src="images/ActiveCalculusImage_sm.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Matthew Boelkins</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C-4.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C-4.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-4-2-Riemann.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C-4.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C-4.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-4-2-Riemann.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="yaN"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="ehW">Contributors</a></li>
+<li><a href="preface-2.html" data-scroll="Kpf">Active Calculus: Our Goals</a></li>
+<li><a href="preface-3.html" data-scroll="qwo">Features of the Text</a></li>
+<li><a href="preface-for-students.html" data-scroll="lZk">Students!  Read this!</a></li>
+<li><a href="preface-for-instructors.html" data-scroll="Sgt">Instructors!  Read this!</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-1.html" data-scroll="UOk"><span class="codenumber">1</span> <span class="title">Understanding the Derivative</span></a><ul>
+<li><a href="sec-1-1-vel.html" data-scroll="Cph">How do we measure velocity?</a></li>
+<li><a href="sec-1-2-lim.html" data-scroll="VMz">The notion of limit</a></li>
+<li><a href="sec-1-3-derivative-pt.html" data-scroll="xyk">The derivative of a function at a point</a></li>
+<li><a href="sec-1-4-derivative-fxn.html" data-scroll="eZh">The derivative function</a></li>
+<li><a href="sec-1-5-units.html" data-scroll="IVE">Interpreting, estimating, and using the derivative</a></li>
+<li><a href="sec-1-6-second-d.html" data-scroll="QeE">The second derivative</a></li>
+<li><a href="sec-1-7-lim-cont-diff.html" data-scroll="UsY">Limits, Continuity, and Differentiability</a></li>
+<li><a href="sec-1-8-tan-line-approx.html" data-scroll="fgy">The Tangent Line Approximation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-2.html" data-scroll="AVt"><span class="codenumber">2</span> <span class="title">Computing Derivatives</span></a><ul>
+<li><a href="sec-2-1-elem-rules.html" data-scroll="SwH">Elementary derivative rules</a></li>
+<li><a href="sec-2-2-sin-cos.html" data-scroll="kOG">The sine and cosine functions</a></li>
+<li><a href="sec-2-3-prod-quot.html" data-scroll="gOH">The product and quotient rules</a></li>
+<li><a href="sec-2-4-other-trig.html" data-scroll="ybn">Derivatives of other trigonometric functions</a></li>
+<li><a href="sec-2-5-chain.html" data-scroll="omc">The chain rule</a></li>
+<li><a href="sec-2-6-inverse.html" data-scroll="iLl">Derivatives of Inverse Functions</a></li>
+<li><a href="sec-2-7-implicit.html" data-scroll="kOT">Derivatives of Functions Given Implicitly</a></li>
+<li><a href="sec-2-8-LHR.html" data-scroll="miH">Using Derivatives to Evaluate Limits</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-3.html" data-scroll="hcC"><span class="codenumber">3</span> <span class="title">Using Derivatives</span></a><ul>
+<li><a href="sec-3-1-tests.html" data-scroll="ubB">Using derivatives to identify extreme values</a></li>
+<li><a href="sec-3-2-families.html" data-scroll="sAJ">Using derivatives to describe families of functions</a></li>
+<li><a href="sec-3-3-optimization.html" data-scroll="bgZ">Global Optimization</a></li>
+<li><a href="sec-3-4-applied-opt.html" data-scroll="ZGh">Applied Optimization</a></li>
+<li><a href="sec-3-5-rel-rates.html" data-scroll="uiS">Related Rates</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-4.html" data-scroll="NjL"><span class="codenumber">4</span> <span class="title">The Definite Integral</span></a><ul>
+<li><a href="sec-4-1-velocity-distance.html" data-scroll="YPj" class="active">Determining distance traveled from velocity</a></li>
+<li><a href="sec-4-2-Riemann.html" data-scroll="DvA">Riemann Sums</a></li>
+<li><a href="sec-4-3-definite-integral.html" data-scroll="Oja">The Definite Integral</a></li>
+<li><a href="sec-4-4-FTC.html" data-scroll="LCP">The Fundamental Theorem of Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-5.html" data-scroll="tqU"><span class="codenumber">5</span> <span class="title">Evaluating Integrals</span></a><ul>
+<li><a href="sec-5-1-antid-graphs.html" data-scroll="mjh">Constructing Accurate Graphs of Antiderivatives</a></li>
+<li><a href="sec-5-2-FTC2.html" data-scroll="lNI">The Second Fundamental Theorem of Calculus</a></li>
+<li><a href="sec-5-3-substitution.html" data-scroll="wBi">Integration by Substitution</a></li>
+<li><a href="sec-5-4-parts.html" data-scroll="cWM">Integration by Parts</a></li>
+<li><a href="sec-5-5-other-opt.html" data-scroll="GxK">Other Options for Finding Algebraic Antiderivatives</a></li>
+<li><a href="sec-5-6-num-int.html" data-scroll="sec-5-6-num-int">Numerical Integration</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-6.html" data-scroll="Zyd"><span class="codenumber">6</span> <span class="title">Using Definite Integrals</span></a><ul>
+<li><a href="sec-6-1-area.html" data-scroll="HaA">Using Definite Integrals to Find Area and Length</a></li>
+<li><a href="sec-6-2-volume.html" data-scroll="KjB">Using Definite Integrals to Find Volume</a></li>
+<li><a href="sec-6-3-mass.html" data-scroll="ZGU">Density, Mass, and Center of Mass</a></li>
+<li><a href="sec-6-4-physics.html" data-scroll="Enl">Physics Applications:  Work, Force, and Pressure</a></li>
+<li><a href="sec-6-5-improper.html" data-scroll="EBG">Improper Integrals</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-7.html" data-scroll="FFm"><span class="codenumber">7</span> <span class="title">Differential Equations</span></a><ul>
+<li><a href="sec-7-1-diff-eq-intro.html" data-scroll="knq">An Introduction to Differential Equations</a></li>
+<li><a href="sec-7-2-qualitative.html" data-scroll="Wyg">Qualitative behavior of solutions to DEs</a></li>
+<li><a href="sec-7-3-euler.html" data-scroll="gBM">Euler's method</a></li>
+<li><a href="sec-7-4-separable.html" data-scroll="arb">Separable differential equations</a></li>
+<li><a href="sec-7-5-modeling.html" data-scroll="Ugq">Modeling with differential equations</a></li>
+<li><a href="sec-7-6-logistic.html" data-scroll="NVF">Population Growth and the Logistic Equation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-8.html" data-scroll="lMv"><span class="codenumber">8</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-8-1-sequences.html" data-scroll="kXx">Sequences</a></li>
+<li><a href="sec-8-2-geometric.html" data-scroll="Kkb">Geometric Series</a></li>
+<li><a href="sec-8-3-series.html" data-scroll="nbf">Series of Real Numbers</a></li>
+<li><a href="sec-8-4-alternating.html" data-scroll="GMS">Alternating Series</a></li>
+<li><a href="sec-8-5-taylor.html" data-scroll="cnS">Taylor Polynomials and Taylor Series</a></li>
+<li><a href="sec-8-6-powerseries.html" data-scroll="YgP">Power Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="gsI"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="integral-table.html" data-scroll="Alz"><span class="codenumber">A</span> <span class="title">A Short Table of Integrals</span></a></li>
+<li class="link"><a href="activities-answers.html" data-scroll="MzR"><span class="codenumber">B</span> <span class="title">Answers to Activities</span></a></li>
+<li class="link"><a href="exercises-answers.html" data-scroll="sHa"><span class="codenumber">C</span> <span class="title">Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="http://gvsu.edu/s/0vK" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="YPj"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Determining distance traveled from velocity</span>
+</h2>
+<article class="objectives goal-like" id="JGl"><h6 class="heading"><span class="type">Motivating Questions</span></h6>
+<ul class="disc">
+<li id="iiV"><p id="fop">If we know the velocity of a moving body at every point in a given interval, can we determine the distance the object has traveled on the time interval?</p></li>
+<li id="Oqe"><p id="Lvy">How is the problem of finding distance traveled related to finding the area under a certain curve?</p></li>
+<li id="uxn"><p id="rCH">What does it mean to antidifferentiate a function and why is this process relevant to finding distance traveled?</p></li>
+<li id="aEw"><p id="XJQ">If velocity is negative, how does this impact the problem of finding distance traveled?</p></li>
+</ul></article><section class="introduction" id="pNu"><p id="IAS">In the first section of the text, we considered a moving object with known position at time \(t\text{,}\) namely, a tennis ball tossed into the air with height \(s\) (in feet) at time \(t\) (in seconds) given by \(s(t) = 64 - 16(t-1)^2\text{.}\) We investigated the average velocity of the ball on an interval \([a,b]\text{,}\) computed by the difference quotient \(\frac{s(b)-s(a)}{b-a}\text{.}\) We found that we could determine the instantaneous velocity of the ball at time \(t\) by taking the derivative of the position function,</p>
+<div class="displaymath">
+\begin{equation*}
+s'(t) = \lim_{h \to 0} \frac{s(t+h)-s(t)}{h}\text{.}
+\end{equation*}
+</div>
+<p id="oIb">Thus, if its position function is differentiable, we can find the velocity of a moving object at any point in time.</p>
+<p id="UPk">From this study of position and velocity we have learned a great deal. We can use the derivative to find a function's instantaneous rate of change at any point in the domain, to find where the function is increasing or decreasing, where it is concave up or concave down, and to locate relative extremes. The vast majority of the problems and applications we have considered have involved the situation where a particular function is known and we seek information that relies on knowing the function's instantaneous rate of change. For all these tasks, we proceed from a function \(f\) to its derivative, \(f'\text{,}\) and use the meaning of the derivative to help us answer important questions.</p>
+<p id="AWt">We have also encountered the reverse situation, where we know the derivative of a function, \(f'\text{,}\) and try to deduce information about \(f\text{.}\) We will focus our attention in <a href="C-4.html" class="internal" title="Chapter 4: The Definite Integral">Chapter 4</a> on this problem: if we know the instantaneous rate of change of a function, can we find the function itself? We start with a more specific question: if we know the instantaneous velocity of an object moving along a straight line path, can we find its corresponding position function?</p>
+<article class="exploration project-like" id="KNr"><h6 class="heading">
+<span class="type">Preview Activity</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
+</h6>
+<p id="eGi">Suppose that a person is taking a walk along a long straight path and walks at a constant rate of 3 miles per hour.</p>
+<ol class="lower-alpha">
+<li id="IYe">
+<p id="NHX">On the left-hand axes provided in <a class="xref" data-knowl="./knowl/F-4-1-PA1.html" title="Figure 4.1.1">Figure 4.1.1</a>, sketch a labeled graph of the velocity function \(v(t) = 3\text{.}\)</p>
+<figure class="figure figure-like" id="ZWp"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/4_1_PA1.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.1<span class="period">.</span></span><span class="space"> </span>At left, axes for plotting \(y = v(t)\text{;}\) at right, for plotting \(y = s(t)\text{.}\)</figcaption></figure><p id="tPg">Note that while the scale on the two sets of axes is the same, the units on the right-hand axes differ from those on the left. The right-hand axes will be used in question (d).</p>
+</li>
+<li id="pfn"><p id="Gdy">How far did the person travel during the two hours? How is this distance related to the area of a certain region under the graph of \(y = v(t)\text{?}\)</p></li>
+<li id="Vmw"><p id="mkH">Find an algebraic formula, \(s(t)\text{,}\) for the position of the person at time \(t\text{,}\) assuming that \(s(0) = 0\text{.}\) Explain your thinking.</p></li>
+<li id="BtF"><p id="SrQ">On the right-hand axes provided in <a class="xref" data-knowl="./knowl/F-4-1-PA1.html" title="Figure 4.1.1">Figure 4.1.1</a>, sketch a labeled graph of the position function \(y = s(t)\text{.}\)</p></li>
+<li id="hAO"><p id="yyZ">For what values of \(t\) is the position function \(s\) increasing? Explain why this is the case using relevant information about the velocity function \(v\text{.}\)</p></li>
+</ol></article></section><section class="subsection" id="EWs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.1</span> <span class="title">Area under the graph of the velocity function</span>
+</h3>
+<p id="hdC">In <a class="xref" data-knowl="./knowl/PA-4-1.html" title="Preview Activity 4.1.1">Preview Activity 4.1.1</a>, we learned that when the velocity of a moving object's velocity is constant (and positive), the area under the velocity curve over an interval of time tells us the distance the object traveled.</p>
+<figure class="figure figure-like" id="ybN"><div class="image-box" style="width: 74%; margin-left: 13%; margin-right: 13%;"><img src="images/4_1_VelArea.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span>At left, a constant velocity function; at right, a non-constant velocity function.</figcaption></figure><p id="NkL">The left-hand graph of <a class="xref" data-knowl="./knowl/F-4-1-VelArea.html" title="Figure 4.1.2">Figure 4.1.2</a> shows the velocity of an object moving at 2 miles per hour over the time interval \([1,1.5]\text{.}\) The area \(A_1\) of the shaded region under \(y = v(t)\) on \([1,1.5]\) is</p>
+<div class="displaymath">
+\begin{equation*}
+A_1= 2 \, \frac{\text{miles} }{\text{hour} } \cdot \frac{1}{2} \, \text{hours}  = 1 \, \text{mile}\text{.}
+\end{equation*}
+</div>
+<p id="trU">This result is simply the fact that distance equals rate times time, provided the rate is constant. Thus, if \(v(t)\) is constant on the interval \([a,b]\text{,}\) the distance traveled on \([a,b]\) is equal to the area \(A\) given by</p>
+<div class="displaymath">
+\begin{equation*}
+A = v(a) (b-a) = v(a) \Delta t\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(\Delta t\) is the change in \(t\) over the interval. (Since the velocity is constant, we can use any value of \(v(t)\) on the interval \([a,b]\text{,}\) we simply chose \(v(a)\text{,}\) the value at the interval's left endpoint.) For several examples where the velocity function is piecewise constant, see <a class="external" href="http://gvsu.edu/s/9T" target="_blank">http://gvsu.edu/s/9T</a>.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 1 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn">Marc Renault, calculus applets.</div></div>
+<p id="Zzd">The situation is more complicated when the velocity function is not constant. But on relatively small intervals where \(v(t)\) does not vary much, we can use the area principle to estimate the distance traveled. The graph at right in <a class="xref" data-knowl="./knowl/F-4-1-VelArea.html" title="Figure 4.1.2">Figure 4.1.2</a> shows a non-constant velocity function. On the interval \([1,1.5]\text{,}\) the velocity varies from \(v(1) = 2.5\) down to \(v(1.5) \approx 2.1\text{.}\) One estimate for the distance traveled is the area of the pictured rectangle,</p>
+<div class="displaymath">
+\begin{equation*}
+A_2 = v(1) \Delta t = 2.5 \, \frac{\text{miles} }{\text{hour} } \cdot \frac{1}{2} \, \text{hours}  = 1.25 \, \text{miles}\text{.}
+\end{equation*}
+</div>
+<p id="FGm">Note that because \(v\) is decreasing on \([1,1.5]\text{,}\) \(A_2 = 1.25\) is an over-estimate of the actual distance traveled.</p>
+<p id="lNv">To estimate the area under this non-constant velocity function on a wider interval, say \([0,3]\text{,}\) one rectangle will not give a good approximation. Instead, we could use the six rectangles pictured in <a class="xref" data-knowl="./knowl/F-4-1-VelArea2.html" title="Figure 4.1.3">Figure 4.1.3</a>, find the area of each rectangle, and add up the total. Obviously there are choices to make and issues to understand: How many rectangles should we use? Where should we evaluate the function to decide the rectangle's height? What happens if the velocity is sometimes negative? Can we find the exact area under any non-constant curve?</p>
+<figure class="figure figure-like" id="eiW"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/4_1_VelArea2.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.3<span class="period">.</span></span><span class="space"> </span>Using six rectangles to estimate the area under \(y = v(t)\) on \([0,3]\text{.}\)</figcaption></figure><p id="RUE">We will study these questions and more in what follows; for now it suffices to observe that the simple idea of the area of a rectangle gives us a powerful tool for estimating distance traveled from a velocity function, as well as for estimating the area under an arbitrary curve. To explore the use of multiple rectangles to approximate area under a non-constant velocity function, see the applet found at <a class="external" href="http://gvsu.edu/s/9U" target="_blank">http://gvsu.edu/s/9U</a>.<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 2 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn">Marc Renault, calculus applets.</div></div>
+<article class="activity project-like" id="gon"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h6>
+<p id="WUB">Suppose that a person is walking in such a way that her velocity varies slightly according to the information given in <a class="xref" data-knowl="./knowl/T-4-1-Act1.html" title="Table 4.1.4">Table 4.1.4</a> and graph given in <a class="xref" data-knowl="./knowl/F-4-1-Act1.html" title="Figure 4.1.5">Figure 4.1.5</a>.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel fixed-width middle" style="width:48.4536082474227%;"><figure class="table table-like" id="bEu"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.4<span class="period">.</span></span><span class="space"> </span>Velocity data for the person walking.</figcaption><table class="tabular" id="HLD">
+<tr>
+<td class="c m b1 r0 l0 t0 lines">\(t\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(v(t)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0.00\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1.500\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0.25\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1.789\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0.50\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1.938\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0.75\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1.992\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1.00\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.000\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1.25\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.008\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1.50\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.063\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1.75\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.211\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(2.00\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.500\)</td>
+</tr>
+</table></figure></div>
+<div class="sbspanel middle" style="width:48.4536082474227%;"><figure class="figure figure-like" id="qNs"><img src="images/4_1_Act1.svg" role="img" class="contained" alt=""><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.5<span class="period">.</span></span><span class="space"> </span>The graph of \(y = v(t)\text{.}\)</figcaption></figure></div>
+</div></div>
+<ol id="DbK" class="lower-alpha">
+<li id="JWp"><p id="Ehd">Using the grid, graph, and given data appropriately, estimate the distance traveled by the walker during the two hour interval from \(t = 0\) to \(t = 2\text{.}\) You should use time intervals of width \(\Delta t = 0.5\text{,}\) choosing a way to use the function consistently to determine the height of each rectangle in order to approximate distance traveled.</p></li>
+<li id="qdy"><p id="kom">How could you get a better approximation of the distance traveled on \([0,2]\text{?}\) Explain, and then find this new estimate.</p></li>
+<li id="WkH"><p id="Qvv">Now suppose that you know that \(v\) is given by \(v(t) = 0.5t^3-1.5t^2+1.5t+1.5\text{.}\) Remember that \(v\) is the derivative of the walker's position function, \(s\text{.}\) Find a formula for \(s\) so that \(s' = v\text{.}\)</p></li>
+<li id="CrQ"><p id="wCE">Based on your work in (c), what is the value of \(s(2) - s(0)\text{?}\) What is the meaning of this quantity?</p></li>
+</ol></article></section><section class="subsection" id="ldB"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Two approaches: area and antidifferentiation</span>
+</h3>
+<p id="Kqf">When the velocity of a moving object is positive, the object's position is always increasing. (We will soon consider situations where velocity is negative; for now, we focus on the situation where velocity is always positive.) We have established that whenever \(v\) is constant on an interval, the exact distance traveled is the area under the velocity curve. When \(v\) is not constant, we can estimate the total distance traveled by finding the areas of rectangles that approximate the area under the velocity curve.</p>
+<p id="qxo">Thus, we see that finding the area between a curve and the horizontal axis is an important exercise: besides being an interesting geometric question, if the curve gives the velocity of a moving object, the area under the curve tells us the exact distance traveled on an interval. We can estimate this area if we have a graph or a table of values for the velocity function.</p>
+<p id="WEx">In <a class="xref" data-knowl="./knowl/act-4-1-1.html" title="Activity 4.1.2">Activity 4.1.2</a>, we encountered an alternate approach to finding the distance traveled. If \(y = v(t)\) is a formula for the instantaneous velocity of a moving object, then \(v\) must be the derivative of the object's position function, \(s\text{.}\) If we can find a formula for \(s(t)\) from the formula for \(v(t)\text{,}\) we will know the position of the object at time \(t\text{,}\) and the change in position over a particular time interval tells us the distance traveled on that interval.</p>
+<p id="CLG">For a simple example, consider the situation from <a class="xref" data-knowl="./knowl/PA-4-1.html" title="Preview Activity 4.1.1">Preview Activity 4.1.1</a>, where a person is walking along a straight line with velocity function \(v(t) = 3\) mph.</p>
+<figure class="figure figure-like" id="Hvz"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/4_1_PA1Soln.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.6<span class="period">.</span></span><span class="space"> </span>The velocity function \(v(t) = 3\) and corresponding position function \(s(t) = 3t\text{.}\)</figcaption></figure><p id="iSP">On the left-hand graph of the velocity function in <a class="xref" data-knowl="./knowl/F-4-1-PA1Soln.html" title="Figure 4.1.6">Figure 4.1.6</a>, we see the relationship between area and distance traveled,</p>
+<div class="displaymath">
+\begin{equation*}
+A= 3 \, \frac{\text{miles} }{\text{hour} } \cdot 1.25 \, \text{hours}  = 3.75 \, \text{miles}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In addition, we observe<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 3 </sup></a> that if \(s(t) = 3t\text{,}\) then \(s'(t) = 3\text{,}\) so \(s(t) = 3t\) is the position function whose derivative is the given velocity function, \(v(t) = 3\text{.}\) The respective locations of the person at times \(t = 0.25\) and \(t = 1.5\) are \(s(1.5) = 4.5\) and \(s(0.25) = 0.75\text{,}\) and therefore</p>
+<div class="displaymath">
+\begin{equation*}
+s(1.5) - s(0.25) = 4.5 - 0.75 = 3.75 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn">Here we are making the implicit assumption that \(s(0) = 0\text{;}\) we will discuss different possibilities for values of \(s(0)\) in subsequent study.</div></div>
+<p id="OZY">This is the person's change in position on \([0.25,1.5]\text{,}\) which is precisely the distance traveled. In this example there are profound ideas and connections that we will study throughout <a href="C-4.html" class="internal" title="Chapter 4: The Definite Integral">Chapter 4</a>.</p>
+<p id="vhh">For now, observe that if we know a formula for a velocity function \(v\text{,}\) it can be very helpful to find a function \(s\) that satisfies \(s' = v\text{.}\) We say that \(s\) is an <em class="emphasis">antiderivative</em> of \(v\text{.}\) More generally, we have the following formal definition.</p>
+<article class="definition definition-like" id="dzc"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
+</h6>
+<p id="ctJ">If \(g\) and \(G\) are functions such that \(G' = g\text{,}\) we say that \(G\) is an <dfn class="terminology">antiderivative</dfn>  of \(g\text{.}\)</p></article><p id="boq">For example, if \(g(x) = 3x^2 + 2x\text{,}\) \(G(x) = x^3 + x^2\) is an antiderivative of \(g\text{,}\) because \(G'(x) = g(x)\text{.}\) Note that we say “an” antiderivative of \(g\) rather than “the” antiderivative of \(g\text{,}\) because \(H(x) = x^3 + x^2 + 5\) is also a function whose derivative is \(g\text{,}\) and thus \(H\) is another antiderivative of \(g\text{.}\)</p>
+<article class="activity project-like" id="cYi"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h6>
+<p id="QJQ">A ball is tossed vertically in such a way that its velocity function is given by \(v(t) = 32 - 32t\text{,}\) where \(t\) is measured in seconds and \(v\) in feet per second. Assume that this function is valid for \(0 \le t \le 2\text{.}\)</p>
+<ol id="wQZ" class="lower-alpha">
+<li id="dtH"><p id="UJP">For what values of \(t\) is the velocity of the ball positive? What does this tell you about the motion of the ball on this interval of time values?</p></li>
+<li id="JAQ"><p id="AQY">Find an antiderivative, \(s\text{,}\) of \(v\) that satisfies \(s(0) = 0\text{.}\)</p></li>
+<li id="pHZ"><p id="gYh">Compute the value of \(s(1) - s(\frac{1}{2})\text{.}\) What is the meaning of the value you find?</p></li>
+<li id="VPi">
+<p id="Nfq">Using the graph of \(y = v(t)\) provided in <a class="xref" data-knowl="./knowl/F-4-1-Act2.html" title="Figure 4.1.8">Figure 4.1.8</a>, find the exact area of the region under the velocity curve between \(t = \frac{1}{2}\) and \(t = 1\text{.}\) What is the meaning of the value you find?</p>
+<figure class="figure figure-like" id="tmz"><div class="image-box" style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/4_1_Act2.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.8<span class="period">.</span></span><span class="space"> </span>The graph of \(y = v(t)\text{.}\)</figcaption></figure>
+</li>
+<li id="BWr"><p id="ZtI">Answer the same questions as in (c) and (d) but instead using the interval \([0,1]\text{.}\)</p></li>
+<li id="idA"><p id="FAR">What is the value of \(s(2) - s(0)\text{?}\) What does this result tell you about the flight of the ball? How is this value connected to the provided graph of \(y = v(t)\text{?}\) Explain.</p></li>
+</ol></article></section><section class="subsection" id="RkK"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.3</span> <span class="title">When velocity is negative</span>
+</h3>
+<p id="nCI">The assumption that its velocity is positive on a given interval guarantees that the movement of an object is always in a single direction, and hence ensures that its change in position is the same as the distance it travels. As we saw in <a class="xref" data-knowl="./knowl/act-4-1-2.html" title="Activity 4.1.3">Activity 4.1.3</a>, there are natural settings in which an object's velocity is negative, and we would like to understand this scenario as well.</p>
+<p id="TJR">Consider a simple example where a woman goes for a walk on the beach along a stretch of very straight shoreline that runs east-west. We assume that her initial position is \(s(0) = 0\text{,}\) and that her position function increases as she moves east from her starting location. For instance, \(s = 1\) mile represents one mile east of the start location, while \(s = -1\) tells us she is one mile west of where she began walking on the beach.</p>
+<p id="zRa">Now suppose she walks in the following manner. From the outset at \(t = 0\text{,}\) she walks due east at a constant rate of \(3\) mph for 1.5 hours. After 1.5 hours, she stops abruptly and begins walking due west at a constant rate of \(4\) mph and does so for 0.5 hours. Then, after another abrupt stop and start, she resumes walking at a constant rate of \(3\) mph to the east for one more hour. What is the total distance she traveled on the time interval from \(t = 0\) to \(t = 3\text{?}\) What the total change in her position over that time?</p>
+<p id="fYj">These questions are possible to answer without calculus because the velocity is constant on each interval. From \(t = 0\) to \(t = 1.5\text{,}\) she traveled</p>
+<div class="displaymath">
+\begin{equation*}
+D_{[0,1.5]} = 3 \ \text{miles per hour}  \cdot 1.5 \ \text{hours}  = 4.5 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<p id="Mfs">On \(t = 1.5\) to \(t = 2\text{,}\) the distance traveled is</p>
+<div class="displaymath">
+\begin{equation*}
+D_{[1.5,2]} = 4 \ \text{miles per hour}  \cdot 0.5 \ \text{hours}  = 2 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<p id="smB">Finally, in the last hour she walked</p>
+<div class="displaymath">
+\begin{equation*}
+D_{[2,3]} = 3 \ \text{miles per hour}  \cdot 1 \ \text{hours}  = 3 \ \text{miles}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so the total distance she traveled is</p>
+<div class="displaymath">
+\begin{equation*}
+D = D_{[0,1.5]} + D_{[1.5,2]} + D_{[2,3]} = 4.5 + 2 + 3 = 9.5 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<p id="YtK">Since the velocity for \(1.5 \lt  t \lt  2\) is \(v = -4\text{,}\) indicating motion in the westward direction, the woman first walked 4.5 miles east, then 2 miles west, followed by 3 more miles east. Thus, the total change in her position is</p>
+<div class="displaymath">
+\begin{equation*}
+\text{change in position}  = 4.5 - 2 + 3 = 5.5 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<p id="EAT">We have been able to answer these questions fairly easily, and if we think about the problem graphically, we can generalize our solution to the more complicated setting when velocity is not constant, and possibly negative.</p>
+<figure class="figure figure-like" id="prV"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/4_1_NegVel.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.9<span class="period">.</span></span><span class="space"> </span>At left, the velocity function of the person walking; at right, the corresponding position function.</figcaption></figure><p id="kIc">In <a class="xref" data-knowl="./knowl/F-4-1-NegVel.html" title="Figure 4.1.9">Figure 4.1.9</a>, we see how the distances we computed can be viewed as areas: \(A_1 = 4.5\) comes from multiplyimg rate times time (\(3 \cdot 1.5\)), as do \(A_2\) and \(A_3\text{.}\) But while \(A_2\) is an area (and is therefore positive), because the velocity function is negative for \(1.5 \lt t \lt 2\text{,}\) this area has a negative sign associated with it. The negative area distinguishes between distance traveled and change in position.</p>
+<p id="QPl">The distance traveled is the sum of the areas,</p>
+<div class="displaymath">
+\begin{equation*}
+D = A_1 + A_2 + A_3 = 4.5 + 2 + 3 = 9.5 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<p id="wWu">But the change in position has to account for travel in the negative direction. An area above the \(t\)-axis is considered positive because it represents distance traveled in the positive direction, while one below the \(t\)-axis is viewed as negative because it represents travel in thenegative direction. Thus, the change in the woman's position is</p>
+<div class="displaymath">
+\begin{equation*}
+s(3) - s(0) = (+4.5) + (-2) + (+3) = 5.5 \ \text{miles}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In other words, the woman walks 4.5 miles in the positive direction, followed by two miles in the negative direction, and then 3 more miles in the positive direction.</p>
+<p id="ddD">Negative velocity is also seen in the graph of the position function \(y=s(t)\text{.}\) Its slope is negative (specifically, \(-4\)) on the interval \(1.5\lt t\lt 2\) because the velocity is \(-4\) on that interval. The negative slope shows the position function is decreasing because the woman is walking east, rather than west.</p>
+<p id="JkM">To summarize, we see that if velocity is sometimes negative, a moving object's change in position different from its distance traveled. If we compute separately the distance traveled on each interval where velocity is positive or negative, we can calculate either the total distance traveled or the total change in position. We assign a negative value to distances traveled in the negative direction when we calculate change in position, but a positive value when we calculate the total distance traveled.</p>
+<article class="activity project-like" id="rLH"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
+</h6>
+<p id="GUF">Suppose that an object moving along a straight line path has its velocity \(v\) (in meters per second) at time \(t\) (in seconds) given by the piecewise linear function whose graph is pictured at left in <a class="xref" data-knowl="./knowl/F-4-1-Act3.html" title="Figure 4.1.10">Figure 4.1.10</a>. We view movement to the right as being in the positive direction (with positive velocity), while movement to the left is in the negative direction.</p>
+<figure class="figure figure-like" id="TiX"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/4_1_Act3.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.10<span class="period">.</span></span><span class="space"> </span>The velocity function of a moving object.</figcaption></figure><p id="nbO">Suppose further that the object's initial position at time \(t = 0\) is \(s(0) = 1\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="adC"><p id="Uoq">Determine the total distance traveled and the total change in position on the time interval \(0 \le t \le 2\text{.}\) What is the object's position at \(t = 2\text{?}\)</p></li>
+<li id="GkL"><p id="Avz">On what time intervals is the moving object's position function increasing? Why? On what intervals is the object's position decreasing? Why?</p></li>
+<li id="mrU"><p id="gCI">What is the object's position at \(t = 8\text{?}\) How many total meters has it traveled to get to this point (including distance in both directions)? Is this different from the object's total change in position on \(t = 0\) to \(t = 8\text{?}\)</p></li>
+<li id="Szd"><p id="MJR">Find the exact position of the object at \(t = 1, 2, 3, \ldots, 8\) and use this data to sketch an accurate graph of \(y = s(t)\) on the axes provided at right in <a class="xref" data-knowl="./knowl/F-4-1-Act3.html" title="Figure 4.1.10">Figure 4.1.10</a>. How can you use the provided information about \(y = v(t)\) to determine the concavity of \(s\) on each relevant interval?</p></li>
+</ol></article></section><section class="subsection" id="xrT"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.4</span> <span class="title">Summary</span>
+</h3>
+<ul id="Vze" class="disc">
+<li id="GLF"><p id="DQZ">If we know the velocity of a moving body at every point in a given interval and the velocity is positive throughout, we can estimate the object's distance traveled and in some circumstances determine this value exactly.</p></li>
+<li id="mSO"><p id="jYi">In particular, when velocity is positive on an interval, we can find the total distance traveled by finding the area under the velocity curve and above the \(t\)-axis on the given time interval. We may only be able to estimate this area, depending on the shape of the velocity curve.</p></li>
+<li id="SZX"><p id="Qfr">An antiderivative of a function \(f\) is a new function \(F\) whose derivative is \(f\text{.}\) That is, \(F\) is an antiderivative of \(f\) provided that \(F' = f\text{.}\) In the context of velocity and position, if we know a velocity function \(v\text{,}\) an antiderivative of \(v\) is a position function \(s\) that satisfies \(s' = v\text{.}\) If \(v\) is positive on a given interval, say \([a,b]\text{,}\) then the change in position, \(s(b) - s(a)\text{,}\) measures the distance the moving object traveled on \([a,b]\text{.}\)</p></li>
+<li id="zhg"><p id="wmA">If its velocity is sometimes negative, a moving object is sometimes traveling in the opposite direction or backtracking. To determine distance traveled, we have to compute the distance separately on intervals where velocity is positive or negative, and account for the change in position on each such interval.</p></li>
+</ul></section><section class="exercises" id="lax"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.1.5</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="Ujq"><h6 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Estimating distance traveled from velocity data.</span>
+</h6></article><article class="exercise exercise-like" id="Aqz"><h6 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Distance from a linear veloity function.</span>
+</h6></article><article class="exercise exercise-like" id="gxI"><h6 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Change in position from a linear velocity function.</span>
+</h6></article><article class="exercise exercise-like" id="MER"><h6 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Comparing distance traveled from velocity graphs.</span>
+</h6></article><article class="exercise exercise-like" id="sMa"><h6 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Finding average acceleration from velocity data.</span>
+</h6></article><article class="exercise exercise-like" id="YTj"><h6 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Change in position from a quadratic velocity function.</span>
+</h6></article><article class="exercise exercise-like" id="Fas"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="KIA">Along the eastern shore of Lake Michigan from Lake Macatawa (near Holland) to Grand Haven, there is a bike path that runs almost directly north-south. For the purposes of this problem, assume the road is completely straight, and that the function \(s(t)\) tracks the position of the biker along this path in miles north of Pigeon Lake, which lies roughly halfway between the ends of the bike path.</p>
+<p id="qPJ">Suppose that the biker's velocity function is given by the graph in <a class="xref" data-knowl="./knowl/F-4-1-Ez1.html" title="Figure 4.1.11">Figure 4.1.11</a> on the time interval \(0 \le t \le 4\) (where \(t\) is measured in hours), and that \(s(0) = 1\text{.}\)</p>
+<figure class="figure figure-like" id="Deb"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/4_1_Ez1.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.11<span class="period">.</span></span><span class="space"> </span>The graph of the biker's velocity, \(y = v(t)\text{,}\) at left.  At right, axes to plot an approximate sketch of \(y = s(t)\text{.}\)</figcaption></figure><ol id="WWS" class="lower-alpha">
+<li id="wqA"><p id="eWQ">Approximately how far north of Pigeon Lake was the cyclist when she was the greatest distance away from Pigeon Lake? At what time did this occur?</p></li>
+<li id="cxJ"><p id="LdZ">What is the cyclist's total change in position on the time interval \(0 \le t \le 2\text{?}\) At \(t = 2\text{,}\) was she north or south of Pigeon Lake?</p></li>
+<li id="IES"><p id="rli">What is the total distance the biker traveled on \(0 \le t \le 4\text{?}\) At the end of the ride, how close was she to the point at which she started?</p></li>
+<li id="oMb"><p id="Xsr">Sketch an approximate graph of \(y = s(t)\text{,}\) the position function of the cyclist, on the interval \(0 \le t \le 4\text{.}\) Label at least four important points on the graph of \(s\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="lhB"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="jlk">A toy rocket is launched vertically from the ground on a day with no wind. The rocket's vertical velocity at time \(t\) (in seconds) is given by \(v(t)= 500-32t\) feet/sec.</p>
+<ol class="lower-alpha">
+<li id="RYE"><p id="gMd">At what time after the rocket is launched does the rocket's velocity equal zero? Call this time value \(a\text{.}\) What happens to the rocket at \(t = a\text{?}\)</p></li>
+<li id="yfN"><p id="MTm">Find the value of the total area enclosed by \(y = v(t)\) and the \(t\)-axis on the interval \(0 \le t \le a\text{.}\) What does this area represent in terms of the physical setting of the problem?</p></li>
+<li id="emW"><p id="tav">Find an antiderivative \(s\) of the function \(v\text{.}\) That is, find a function \(s\) such that \(s'(t) = v(t)\text{.}\)</p></li>
+<li id="Kuf"><p id="ZhE">Compute the value of \(s(a) - s(0)\text{.}\) What does this number represent in terms of the physical setting of the problem?</p></li>
+<li id="qBo"><p id="FoN">Compute \(s(5) - s(1)\text{.}\) What does this number tell you about the rocket's flight?</p></li>
+</ol></article><article class="exercise exercise-like" id="RoK"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="Pst">An object moving along a horizontal axis has its instantaneous velocity at time \(t\) in seconds given by the function \(v\) pictured in <a class="xref" data-knowl="./knowl/F-4-1-Ez3.html" title="Figure 4.1.12">Figure 4.1.12</a>, where \(v\) is measured in feet/sec. Assume that the curves that make up the parts of the graph of \(y=v(t)\) are either portions of straight lines or portions of circles.</p>
+<figure class="figure figure-like" id="bGL"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/4_1_Ez3.svg" role="img" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.12<span class="period">.</span></span><span class="space"> </span>The graph of \(y = v(t)\text{,}\) the velocity function of a moving object.</figcaption></figure><ol id="vzC" class="lower-alpha">
+<li id="gcj"><p id="uPI">Determine the exact total distance the object traveled on \(0 \le t \le 2\text{.}\)</p></li>
+<li id="Mjs"><p id="aWR">What is the value and meaning of \(s(5) - s(2)\text{,}\) where \(y = s(t)\) is the position function of the moving object?</p></li>
+<li id="sqB"><p id="Hea">On which time interval did the object travel the greatest distance: \([0,2]\text{,}\) \([2,4]\text{,}\) or \([5,7]\text{?}\)</p></li>
+<li id="YxK"><p id="nlj">On which time interval(s) is the position function \(s\) increasing? At which point(s) does \(s\) achieve a relative maximum?</p></li>
+</ol></article><article class="exercise exercise-like" id="xvT"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="HNU">Filters at a water treatment plant become dirtier over time and thus become less effective; they are replaced every 30 days. During one 30-day period, the rate at which pollution passes through the filters into a nearby lake (in units of particulate matter per day) is measured every 6 days and is given in the following table. The time \(t\) is measured in days since the filters were replaced.</p>
+<figure class="table table-like" id="YMf"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.13<span class="period">.</span></span><span class="space"> </span>Pollution data for the water filters.</figcaption><div class="tabular-box natural-width"><table class="tabular" id="ETo">
+<tr>
+<td class="l m b1 r0 l0 t1 lines">Day, \(t\)</td>
+<td class="l m b1 r0 l0 t1 lines">\(0\)</td>
+<td class="l m b1 r0 l0 t1 lines">\(6\)</td>
+<td class="l m b1 r0 l0 t1 lines">\(12\)</td>
+<td class="l m b1 r0 l0 t1 lines">\(18\)</td>
+<td class="l m b1 r0 l0 t1 lines">\(24\)</td>
+<td class="l m b1 r0 l0 t1 lines">\(30\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines">Rate of pollution in units per day, \(p(t)\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(7\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(8\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(10\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(13\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(18\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(35\)</td>
+</tr>
+</table></div></figure><ol id="nVd" class="lower-alpha">
+<li id="BKn"><p id="QxM">Plot the given data on a set of axes with time on the horizontal axis and the rate of pollution on the vertical axis.</p></li>
+<li id="hRw"><p id="wEV">Explain why the amount of pollution that entered the lake during this 30-day period would be given exactly by the area bounded by \(y = p(t)\) and the \(t\)-axis on the time interval \([0,30]\text{.}\)</p></li>
+<li id="NYF"><p id="cMe">Estimate the total amount of pollution entering the lake during this 30-day period. Carefully explain how you determined your estimate.</p></li>
+</ol></article></section></section></div></main>
+</div>
+</body>
+</html>

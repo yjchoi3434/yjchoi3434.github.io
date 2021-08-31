@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T23:22:22Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.6.4.4.1</span><span class="period">.</span>
+</h6>
+<ol class="lower-alpha">
+<li>
+<p>Observe that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+f'(x) \amp = \sum_{k=1}^{\infty} ka_kx^{k-1}\\
+f''(x) \amp = \sum_{k=2}^{\infty} k(k-1)a_kx^{k-2}\\
+f^{(3)}(x) \amp = \sum_{k=3}^{\infty} k(k-1)(k-2)a_kx^{k-3}\\
+f^{(4)}(x) \amp = \sum_{k=4}^{\infty} k(k-1)(k-2)(k-3)a_kx^{k-4}
+\end{align*}
+</div>
+<p class="continuation">and therefore</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+f(0) \amp = a_0\\
+f'(0) \amp = a_1\\
+f''(0) \amp = 2!a_2\\
+f^{(3)}(0) \amp = 3!a_3\\
+f^{(4)}(0) \amp = 4!a_4\text{.}
+\end{align*}
+</div>
+</li>
+<li>
+<p>Since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f^{(n)}(x) = \sum_{k=n}^{\infty} k(k-1)(k-2) \cdots (k-n+1) a_kx^{k-n}
+\end{equation*}
+</div>
+<p class="continuation">every term of this series vanishes at \(x = 0\) except the first. Thus it follows \(f^{(n)}(0) = n(n-1)(n-2) \cdots (1) a_n\text{,}\) so \(f^{(n)}(0) = n! a_n\text{.}\)</p>
+</li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Since \(a_k = \frac{f^{(k)}(0)}{k!}\) for each \(k \geq 0\text{,}\) we see that these are just the coefficients of the Taylor series expansion of \(f\text{,}\) and thus we get the unsurprising result that the coefficients of a power series are identical to the Taylor series of the power series.</p></li>
+</ol>
+</div>
+<span class="incontext"><a href="sec-8-6-powerseries.html#TXI">in-context</a></span>
+</body>
+</html>

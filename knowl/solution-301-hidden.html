@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T23:17:58Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li>
+<p>Since the baby's weight, \(w(t)\) (in pounds at month \(t\)), grows at a rate proportional to its reciprocal, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{dw}{dt} = \frac{k}{w}\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Given that \(W(0) = 8\) and \(W(1) = 9\text{,}\) we can both solve the IVP and determine \(k\text{.}\) To start, we separate variables and solve the differential equation by writing</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+w \frac{dw}{dt} = k
+\end{equation*}
+</div>
+<p class="continuation">and integrating to get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\int w \frac{dw}{dt} \, dt = \int k \, dt\text{.}
+\end{equation*}
+</div>
+<p class="continuation">It follows that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{2}w^2 = kt + C
+\end{equation*}
+</div>
+<p class="continuation">and therefore \(w(t) = \sqrt{2kt + C_1}\) (where \(C_1 = 2C\) and we take the positive square root because we know \(w(t) \gt 0\)). Applying the initial condition \(w(0) = 0\text{,}\) we find that \(8 = \sqrt{C_1}\text{,}\) so \(C_1 = 64\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+w(t) = \sqrt{2kt + 64}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">To find \(k\text{,}\) we use the additional information that \(w(1) = 9\text{,}\) so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+9 = \sqrt{2k + 64}
+\end{equation*}
+</div>
+<p class="continuation">which implies that \(81 = 2k + 64\) and thus \(k = 17/2\text{.}\) Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+w(t) = \sqrt{7t+64}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">At one year, according to the model the baby weighs \(w(12) = \sqrt{148} \approx 12.17\) pounds.</p>
+</li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">While the function \(w(t) = \sqrt{7t+64}\) grows without bound as \(t\) increases, the model is unrealistic more because the function initially doesn't grow fast enough. For example, the model predicts that at age \(10\text{,}\) \(w(120) \approx 30.06\) pounds, and at age \(20\text{,}\) \(w(120) = 41.76\) pounds. A realistic model would need to grow much more quickly early in life and then level off around age \(20\text{.}\)</p></li>
+</ol></div></body>
+</html>

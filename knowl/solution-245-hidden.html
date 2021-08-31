@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T23:14:15Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">These two curves intersect when \(x = 1\text{,}\) hence at the point \((1,1)\text{.}\) When we revolve the region \(R\) about the \(y\)-axis, we get the three-dimensional solid pictured at left in <a class="xref" data-knowl="./knowl/F-6-2-Ex3.html" title="Figure 6.2.7">Figure 6.2.7</a>.</p>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="images/6_2_Ex3_left.svg" role="img" class="contained" alt=""></div>
+<div class="sbspanel top" style="width:50%;"><img src="images/6_2_Ex3_right.svg" role="img" class="contained" alt=""></div>
+</div></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.7<span class="period">.</span></span><span class="space"> </span>At left, the solid of revolution in <a class="xref" data-knowl="./knowl/Ex-6-2-AboutY.html" title="Example 6.2.6">Example 6.2.6</a>.  At right, a typical slice with inner radius \(r(y)\) and outer radius \(R(y)\text{.}\)</figcaption></figure><p>Note that the slices are cylindrical washers only if taken perpendicular to the \(y\)-axis. We slice the solid horizontally, starting at \(y = 0\) and proceeding up to \(y = 1\text{.}\) The thickness of a representative slice is \(\Delta y\text{,}\) so we must express the integrand in terms of \(y\text{.}\) The inner radius is determined by the curve \(y = \sqrt{x}\text{,}\) so we solve for \(x\) and get \(x = y^2 = r(y)\text{.}\) In the same way, we solve the curve \(y = x^4\) (which governs the outer radius) for \(x\) in terms of \(y\text{,}\) and hence \(x = \sqrt[4]{y}\text{.}\) Therefore, the volume of a typical slice is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+V_{\text{slice} } = \pi [R(y)^2 - r(y)^2] = \pi[(\sqrt[4]{y})^2 - (y^2)^2] \Delta y\text{.}
+\end{equation*}
+</div>
+<p>We use a definite integral to sum the volumes of all the slices from \(y = 0\) to \(y = 1\text{.}\) The total volume is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+V = \int_{y=0}^{y=1} \pi \left[ (\sqrt[4]{y})^2 - (y^2)^2 \right] \, dy\text{.}
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">It is straightforward to evaluate the integral and find that \(V = \frac{7}{15} \pi\text{.}\)</p>
+</div></body>
+</html>

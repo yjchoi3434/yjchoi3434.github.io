@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T23:01:52Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AC Answers to Selected Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script async="" src="https://cse.google.com/cse.js?cx=015103900096539427448:ngwuia10qci"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="boelkins-ACS" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\dollar}{\$}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\arctanh}{arctanh}
+              \DeclareMathOperator{\arcsec}{arcsec}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://activecalculus.org" target="_blank"><img src="images/ActiveCalculusImage_sm.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Matthew Boelkins</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="activities-answers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="index-1.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="activities-answers.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="index-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="yaN"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="ehW">Contributors</a></li>
+<li><a href="preface-2.html" data-scroll="Kpf">Active Calculus: Our Goals</a></li>
+<li><a href="preface-3.html" data-scroll="qwo">Features of the Text</a></li>
+<li><a href="preface-for-students.html" data-scroll="lZk">Students!  Read this!</a></li>
+<li><a href="preface-for-instructors.html" data-scroll="Sgt">Instructors!  Read this!</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-1.html" data-scroll="UOk"><span class="codenumber">1</span> <span class="title">Understanding the Derivative</span></a><ul>
+<li><a href="sec-1-1-vel.html" data-scroll="Cph">How do we measure velocity?</a></li>
+<li><a href="sec-1-2-lim.html" data-scroll="VMz">The notion of limit</a></li>
+<li><a href="sec-1-3-derivative-pt.html" data-scroll="xyk">The derivative of a function at a point</a></li>
+<li><a href="sec-1-4-derivative-fxn.html" data-scroll="eZh">The derivative function</a></li>
+<li><a href="sec-1-5-units.html" data-scroll="IVE">Interpreting, estimating, and using the derivative</a></li>
+<li><a href="sec-1-6-second-d.html" data-scroll="QeE">The second derivative</a></li>
+<li><a href="sec-1-7-lim-cont-diff.html" data-scroll="UsY">Limits, Continuity, and Differentiability</a></li>
+<li><a href="sec-1-8-tan-line-approx.html" data-scroll="fgy">The Tangent Line Approximation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-2.html" data-scroll="AVt"><span class="codenumber">2</span> <span class="title">Computing Derivatives</span></a><ul>
+<li><a href="sec-2-1-elem-rules.html" data-scroll="SwH">Elementary derivative rules</a></li>
+<li><a href="sec-2-2-sin-cos.html" data-scroll="kOG">The sine and cosine functions</a></li>
+<li><a href="sec-2-3-prod-quot.html" data-scroll="gOH">The product and quotient rules</a></li>
+<li><a href="sec-2-4-other-trig.html" data-scroll="ybn">Derivatives of other trigonometric functions</a></li>
+<li><a href="sec-2-5-chain.html" data-scroll="omc">The chain rule</a></li>
+<li><a href="sec-2-6-inverse.html" data-scroll="iLl">Derivatives of Inverse Functions</a></li>
+<li><a href="sec-2-7-implicit.html" data-scroll="kOT">Derivatives of Functions Given Implicitly</a></li>
+<li><a href="sec-2-8-LHR.html" data-scroll="miH">Using Derivatives to Evaluate Limits</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-3.html" data-scroll="hcC"><span class="codenumber">3</span> <span class="title">Using Derivatives</span></a><ul>
+<li><a href="sec-3-1-tests.html" data-scroll="ubB">Using derivatives to identify extreme values</a></li>
+<li><a href="sec-3-2-families.html" data-scroll="sAJ">Using derivatives to describe families of functions</a></li>
+<li><a href="sec-3-3-optimization.html" data-scroll="bgZ">Global Optimization</a></li>
+<li><a href="sec-3-4-applied-opt.html" data-scroll="ZGh">Applied Optimization</a></li>
+<li><a href="sec-3-5-rel-rates.html" data-scroll="uiS">Related Rates</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-4.html" data-scroll="NjL"><span class="codenumber">4</span> <span class="title">The Definite Integral</span></a><ul>
+<li><a href="sec-4-1-velocity-distance.html" data-scroll="YPj">Determining distance traveled from velocity</a></li>
+<li><a href="sec-4-2-Riemann.html" data-scroll="DvA">Riemann Sums</a></li>
+<li><a href="sec-4-3-definite-integral.html" data-scroll="Oja">The Definite Integral</a></li>
+<li><a href="sec-4-4-FTC.html" data-scroll="LCP">The Fundamental Theorem of Calculus</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-5.html" data-scroll="tqU"><span class="codenumber">5</span> <span class="title">Evaluating Integrals</span></a><ul>
+<li><a href="sec-5-1-antid-graphs.html" data-scroll="mjh">Constructing Accurate Graphs of Antiderivatives</a></li>
+<li><a href="sec-5-2-FTC2.html" data-scroll="lNI">The Second Fundamental Theorem of Calculus</a></li>
+<li><a href="sec-5-3-substitution.html" data-scroll="wBi">Integration by Substitution</a></li>
+<li><a href="sec-5-4-parts.html" data-scroll="cWM">Integration by Parts</a></li>
+<li><a href="sec-5-5-other-opt.html" data-scroll="GxK">Other Options for Finding Algebraic Antiderivatives</a></li>
+<li><a href="sec-5-6-num-int.html" data-scroll="sec-5-6-num-int">Numerical Integration</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-6.html" data-scroll="Zyd"><span class="codenumber">6</span> <span class="title">Using Definite Integrals</span></a><ul>
+<li><a href="sec-6-1-area.html" data-scroll="HaA">Using Definite Integrals to Find Area and Length</a></li>
+<li><a href="sec-6-2-volume.html" data-scroll="KjB">Using Definite Integrals to Find Volume</a></li>
+<li><a href="sec-6-3-mass.html" data-scroll="ZGU">Density, Mass, and Center of Mass</a></li>
+<li><a href="sec-6-4-physics.html" data-scroll="Enl">Physics Applications:  Work, Force, and Pressure</a></li>
+<li><a href="sec-6-5-improper.html" data-scroll="EBG">Improper Integrals</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-7.html" data-scroll="FFm"><span class="codenumber">7</span> <span class="title">Differential Equations</span></a><ul>
+<li><a href="sec-7-1-diff-eq-intro.html" data-scroll="knq">An Introduction to Differential Equations</a></li>
+<li><a href="sec-7-2-qualitative.html" data-scroll="Wyg">Qualitative behavior of solutions to DEs</a></li>
+<li><a href="sec-7-3-euler.html" data-scroll="gBM">Euler's method</a></li>
+<li><a href="sec-7-4-separable.html" data-scroll="arb">Separable differential equations</a></li>
+<li><a href="sec-7-5-modeling.html" data-scroll="Ugq">Modeling with differential equations</a></li>
+<li><a href="sec-7-6-logistic.html" data-scroll="NVF">Population Growth and the Logistic Equation</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C-8.html" data-scroll="lMv"><span class="codenumber">8</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-8-1-sequences.html" data-scroll="kXx">Sequences</a></li>
+<li><a href="sec-8-2-geometric.html" data-scroll="Kkb">Geometric Series</a></li>
+<li><a href="sec-8-3-series.html" data-scroll="nbf">Series of Real Numbers</a></li>
+<li><a href="sec-8-4-alternating.html" data-scroll="GMS">Alternating Series</a></li>
+<li><a href="sec-8-5-taylor.html" data-scroll="cnS">Taylor Polynomials and Taylor Series</a></li>
+<li><a href="sec-8-6-powerseries.html" data-scroll="YgP">Power Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="gsI"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="integral-table.html" data-scroll="Alz"><span class="codenumber">A</span> <span class="title">A Short Table of Integrals</span></a></li>
+<li class="link"><a href="activities-answers.html" data-scroll="MzR"><span class="codenumber">B</span> <span class="title">Answers to Activities</span></a></li>
+<li class="link active"><a href="exercises-answers.html" data-scroll="sHa"><span class="codenumber">C</span> <span class="title">Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="http://gvsu.edu/s/0vK" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="solutions" id="sHa"><h2 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">C</span> <span class="title">Answers to Selected Exercises</span>
+</h2>
+<section class="introduction" id="EVs"><p id="csJ">This appendix contains answers to all non-WeBWorK exercises in the text. For WeBWorK exercises, please use the <abbr class="initialism">HTML</abbr> version of the text for access to answers and solutions.</p></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">Understanding the Derivative</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">How do we measure velocity?</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.1.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-4-hidden.html" title="Answer 1.1.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-5-hidden.html" title="Answer 1.1.4.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.1.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-6-hidden.html" title="Answer 1.1.4.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">The notion of limit</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.2.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-10-hidden.html" title="Answer 1.2.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-11-hidden.html" title="Answer 1.2.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-12-hidden.html" title="Answer 1.2.4.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-13-hidden.html" title="Answer 1.2.4.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">The derivative of a function at a point</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.3.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-17-hidden.html" title="Answer 1.3.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-18-hidden.html" title="Answer 1.3.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-19-hidden.html" title="Answer 1.3.3.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-20-hidden.html" title="Answer 1.3.3.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">The derivative function</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.4.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-23-hidden.html" title="Answer 1.4.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-24-hidden.html" title="Answer 1.4.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-25-hidden.html" title="Answer 1.4.3.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.4.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-26-hidden.html" title="Answer 1.4.3.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Interpreting, estimating, and using the derivative</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.5.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-30-hidden.html" title="Answer 1.5.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-31-hidden.html" title="Answer 1.5.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-32-hidden.html" title="Answer 1.5.4.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-33-hidden.html" title="Answer 1.5.4.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">The second derivative</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.6.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.6.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-37-hidden.html" title="Answer 1.6.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.6.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-38-hidden.html" title="Answer 1.6.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.6.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-39-hidden.html" title="Answer 1.6.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.6.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-40-hidden.html" title="Answer 1.6.5.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">Limits, Continuity, and Differentiability</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.7.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-44-hidden.html" title="Answer 1.7.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-45-hidden.html" title="Answer 1.7.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-46-hidden.html" title="Answer 1.7.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.7.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-47-hidden.html" title="Answer 1.7.5.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.8</span> <span class="title">The Tangent Line Approximation</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.8.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-50-hidden.html" title="Answer 1.8.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-51-hidden.html" title="Answer 1.8.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-52-hidden.html" title="Answer 1.8.4.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.8.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-53-hidden.html" title="Answer 1.8.4.8.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">Computing Derivatives</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Elementary derivative rules</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.1.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-57-hidden.html" title="Answer 2.1.5.10.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.5.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-58-hidden.html" title="Answer 2.1.5.11.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.5.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-59-hidden.html" title="Answer 2.1.5.12.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.1.5.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-60-hidden.html" title="Answer 2.1.5.13.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">The sine and cosine functions</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.2.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-64-hidden.html" title="Answer 2.2.3.1.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-65-hidden.html" title="Answer 2.2.3.2.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-66-hidden.html" title="Answer 2.2.3.3.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">The product and quotient rules</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.3.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-70-hidden.html" title="Answer 2.3.5.10.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-71-hidden.html" title="Answer 2.3.5.11.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-72-hidden.html" title="Answer 2.3.5.12.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-73-hidden.html" title="Answer 2.3.5.13.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.5.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-74-hidden.html" title="Answer 2.3.5.14.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Derivatives of other trigonometric functions</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.4.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-78-hidden.html" title="Answer 2.4.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-79-hidden.html" title="Answer 2.4.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-80-hidden.html" title="Answer 2.4.3.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">The chain rule</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.5.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-84-hidden.html" title="Answer 2.5.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-85-hidden.html" title="Answer 2.5.5.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-86-hidden.html" title="Answer 2.5.5.10.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.5.5.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-87-hidden.html" title="Answer 2.5.5.11.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Derivatives of Inverse Functions</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.6.6</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.6.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-91-hidden.html" title="Answer 2.6.6.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.6.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-92-hidden.html" title="Answer 2.6.6.10.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.6.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-93-hidden.html" title="Answer 2.6.6.11.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.6.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-94-hidden.html" title="Answer 2.6.6.12.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.7</span> <span class="title">Derivatives of Functions Given Implicitly</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.7.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-98-hidden.html" title="Answer 2.7.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-99-hidden.html" title="Answer 2.7.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-100-hidden.html" title="Answer 2.7.3.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.8</span> <span class="title">Using Derivatives to Evaluate Limits</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.8.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-104-hidden.html" title="Answer 2.8.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-105-hidden.html" title="Answer 2.8.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-106-hidden.html" title="Answer 2.8.4.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.8.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-107-hidden.html" title="Answer 2.8.4.8.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Using Derivatives</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Using derivatives to identify extreme values</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.1.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-111-hidden.html" title="Answer 3.1.4.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-112-hidden.html" title="Answer 3.1.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-113-hidden.html" title="Answer 3.1.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-114-hidden.html" title="Answer 3.1.4.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Using derivatives to describe families of functions</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.2.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-118-hidden.html" title="Answer 3.2.3.3.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-119-hidden.html" title="Answer 3.2.3.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-120-hidden.html" title="Answer 3.2.3.5.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Global Optimization</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.3.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4.1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-124-hidden.html" title="Answer 3.3.4.1.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-125-hidden.html" title="Answer 3.3.4.2.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-126-hidden.html" title="Answer 3.3.4.3.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-127-hidden.html" title="Answer 3.3.4.4.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Applied Optimization</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.4.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-132-hidden.html" title="Answer 3.4.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-133-hidden.html" title="Answer 3.4.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-134-hidden.html" title="Answer 3.4.3.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.4.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-135-hidden.html" title="Answer 3.4.3.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Related Rates</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.5.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-140-hidden.html" title="Answer 3.5.3.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-141-hidden.html" title="Answer 3.5.3.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-142-hidden.html" title="Answer 3.5.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.5.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-143-hidden.html" title="Answer 3.5.3.7.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">4</span> <span class="title">The Definite Integral</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Determining distance traveled from velocity</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.1.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-147-hidden.html" title="Answer 4.1.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-148-hidden.html" title="Answer 4.1.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-149-hidden.html" title="Answer 4.1.5.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-150-hidden.html" title="Answer 4.1.5.10.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Riemann Sums</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.2.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.5.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-154-hidden.html" title="Answer 4.2.5.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-155-hidden.html" title="Answer 4.2.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-156-hidden.html" title="Answer 4.2.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-157-hidden.html" title="Answer 4.2.5.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">The Definite Integral</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.3.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-161-hidden.html" title="Answer 4.3.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-162-hidden.html" title="Answer 4.3.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-163-hidden.html" title="Answer 4.3.5.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-164-hidden.html" title="Answer 4.3.5.10.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">The Fundamental Theorem of Calculus</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.4.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-168-hidden.html" title="Answer 4.4.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-169-hidden.html" title="Answer 4.4.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-170-hidden.html" title="Answer 4.4.5.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-171-hidden.html" title="Answer 4.4.5.10.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.5.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-172-hidden.html" title="Answer 4.4.5.11.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">5</span> <span class="title">Evaluating Integrals</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Constructing Accurate Graphs of Antiderivatives</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.1.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.1.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-176-hidden.html" title="Answer 5.1.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.1.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-177-hidden.html" title="Answer 5.1.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.1.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-178-hidden.html" title="Answer 5.1.5.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">The Second Fundamental Theorem of Calculus</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.2.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.5.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-182-hidden.html" title="Answer 5.2.5.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-183-hidden.html" title="Answer 5.2.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-184-hidden.html" title="Answer 5.2.5.6.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Integration by Substitution</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.3.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-188-hidden.html" title="Answer 5.3.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-189-hidden.html" title="Answer 5.3.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-190-hidden.html" title="Answer 5.3.5.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-191-hidden.html" title="Answer 5.3.5.10.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.4</span> <span class="title">Integration by Parts</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.4.7</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.4.7.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-195-hidden.html" title="Answer 5.4.7.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.4.7.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-196-hidden.html" title="Answer 5.4.7.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.4.7.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-197-hidden.html" title="Answer 5.4.7.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">Other Options for Finding Algebraic Antiderivatives</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.5.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-200-hidden.html" title="Answer 5.5.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-201-hidden.html" title="Answer 5.5.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.5.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-202-hidden.html" title="Answer 5.5.5.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.6</span> <span class="title">Numerical Integration</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">5.6.6</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.6.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-206-hidden.html" title="Answer 5.6.6.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.6.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-207-hidden.html" title="Answer 5.6.6.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-208-hidden.html" title="Answer 5.6.6.7.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">6</span> <span class="title">Using Definite Integrals</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Using Definite Integrals to Find Area and Length</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.1.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-212-hidden.html" title="Answer 6.1.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-213-hidden.html" title="Answer 6.1.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-214-hidden.html" title="Answer 6.1.5.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Using Definite Integrals to Find Volume</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.2.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-218-hidden.html" title="Answer 6.2.5.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-219-hidden.html" title="Answer 6.2.5.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.2.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-220-hidden.html" title="Answer 6.2.5.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Density, Mass, and Center of Mass</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.3.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-224-hidden.html" title="Answer 6.3.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-225-hidden.html" title="Answer 6.3.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-226-hidden.html" title="Answer 6.3.5.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.4</span> <span class="title">Physics Applications:  Work, Force, and Pressure</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.4.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.4.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-230-hidden.html" title="Answer 6.4.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.4.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-231-hidden.html" title="Answer 6.4.5.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Improper Integrals</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.5.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-235-hidden.html" title="Answer 6.5.5.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-236-hidden.html" title="Answer 6.5.5.7.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">7</span> <span class="title">Differential Equations</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">An Introduction to Differential Equations</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">7.1.5</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.1.5.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-240-hidden.html" title="Answer 7.1.5.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.1.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-241-hidden.html" title="Answer 7.1.5.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.1.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-242-hidden.html" title="Answer 7.1.5.6.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Qualitative behavior of solutions to DEs</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">7.2.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-245-hidden.html" title="Answer 7.2.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-246-hidden.html" title="Answer 7.2.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-247-hidden.html" title="Answer 7.2.4.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.2.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-248-hidden.html" title="Answer 7.2.4.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">Euler's method</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">7.3.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.3.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-251-hidden.html" title="Answer 7.3.4.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.3.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-252-hidden.html" title="Answer 7.3.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.3.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-253-hidden.html" title="Answer 7.3.4.6.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.4</span> <span class="title">Separable differential equations</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">7.4.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-257-hidden.html" title="Answer 7.4.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-258-hidden.html" title="Answer 7.4.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-259-hidden.html" title="Answer 7.4.3.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-260-hidden.html" title="Answer 7.4.3.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.5</span> <span class="title">Modeling with differential equations</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">7.5.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.5.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-263-hidden.html" title="Answer 7.5.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.5.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-264-hidden.html" title="Answer 7.5.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.5.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-265-hidden.html" title="Answer 7.5.3.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.5.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-266-hidden.html" title="Answer 7.5.3.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.6</span> <span class="title">Population Growth and the Logistic Equation</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">7.6.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">7.6.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-269-hidden.html" title="Answer 7.6.4.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.6.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-270-hidden.html" title="Answer 7.6.4.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.6.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-271-hidden.html" title="Answer 7.6.4.7.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">8</span> <span class="title">Sequences and Series</span>
+</h3></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">Sequences</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.1.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">8.1.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-274-hidden.html" title="Answer 8.1.3.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.1.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-275-hidden.html" title="Answer 8.1.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.1.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-276-hidden.html" title="Answer 8.1.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.1.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-277-hidden.html" title="Answer 8.1.3.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Geometric Series</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.2.3</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">8.2.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-281-hidden.html" title="Answer 8.2.3.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.2.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-282-hidden.html" title="Answer 8.2.3.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.2.3.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-283-hidden.html" title="Answer 8.2.3.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.2.3.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-284-hidden.html" title="Answer 8.2.3.8.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.2.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-285-hidden.html" title="Answer 8.2.3.9.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.3</span> <span class="title">Series of Real Numbers</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.3.7</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">8.3.7.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-295-hidden.html" title="Answer 8.3.7.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.3.7.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-296-hidden.html" title="Answer 8.3.7.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.3.7.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-297-hidden.html" title="Answer 8.3.7.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.3.7.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-298-hidden.html" title="Answer 8.3.7.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.4</span> <span class="title">Alternating Series</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.4.6</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">8.4.6.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-305-hidden.html" title="Answer 8.4.6.5.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.4.6.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-306-hidden.html" title="Answer 8.4.6.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.4.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-307-hidden.html" title="Answer 8.4.6.7.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.5</span> <span class="title">Taylor Polynomials and Taylor Series</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.5.6</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">8.5.6.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-314-hidden.html" title="Answer 8.5.6.6.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.5.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-315-hidden.html" title="Answer 8.5.6.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.5.6.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-316-hidden.html" title="Answer 8.5.6.8.1"><span class="type">Answer</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.6</span> <span class="title">Power Series</span>
+</h4></section><section class="exercises"><h5 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.6.4</span> <span class="title">Exercises</span>
+</h5>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">8.6.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-321-hidden.html" title="Answer 8.6.4.3.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.6.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-322-hidden.html" title="Answer 8.6.4.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">8.6.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-323-hidden.html" title="Answer 8.6.4.6.1"><span class="type">Answer</span></a></div></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-22T23:15:45Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">f</span><span class="period">.</span>
+</h6>
+<p>We assume that \(p\) is a positive real number.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\int_1^\infty \frac{1}{x^p} dx \amp = \lim_{b \to \infty} \int_1^b x^{-p} dx\\
+\amp = \lim_{b \to \infty} \left( -\frac{b^{1-p}}{p-1} + \frac{1}{p-1} \right)
+\end{align*}
+</div>
+<p class="continuation">We now use two cases:</p>
+<ul class="disc">
+<li>
+<p>(Assume \(0 \lt  p \lt  1\text{.}\))  In this case, \(1 - p \gt 0\) and so \(\lim_{b \to \infty} b^{1-p} = \infty\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lim_{b \to \infty} \left( -\frac{b^{1-p}}{p-1} + \frac{1}{p-1} \right) = \infty
+\end{equation*}
+</div>
+<p class="continuation">Using this and equation (1), we see that \(\int_1^\infty \frac{1}{x^p} dx\) diverges.</p>
+</li>
+<li>
+<p>(Assume \(p \gt 1\text{.}\))  In this case, \(1 - p \lt  0\) and so \(\lim_{b \to \infty} b^{1-p} = 0\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lim_{b \to \infty} \left( -\frac{b^{1-p}}{p-1} + \frac{1}{p-1} \right) = \frac{1}{p-1}
+\end{equation*}
+</div>
+<p class="continuation">Using this and equation (1), we see that \(\int_1^\infty \frac{1}{x^p} dx\) converges to \(\dfrac{1}{p-1}\text{.}\)</p>
+</li>
+</ul></article><span class="incontext"><a href="sec-6-5-improper.html#itv">in-context</a></span>
+</body>
+</html>
